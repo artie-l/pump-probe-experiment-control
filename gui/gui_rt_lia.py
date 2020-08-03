@@ -1,10 +1,3 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Tue Jul 28 13:03:15 2020
-
-@author: XY
-"""
-
 from mttkinter import mtTkinter as tk
 import ttk
 

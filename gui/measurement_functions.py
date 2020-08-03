@@ -1,17 +1,3 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Mon Jul 27 10:15:50 2020
-
-@author: XY
-"""
-
-# -*- coding: utf-8 -*-
-"""
-Created on Fri Jul 24 15:15:26 2020
-
-@author: XY
-"""
-
 import numpy as np
 from gui_variables import tconstliaoutp, tconstuseroutp
 import datetime

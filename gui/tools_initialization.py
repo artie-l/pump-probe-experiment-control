@@ -1,10 +1,3 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Mon Oct  7 14:04:03 2019
-
-@author: immm
-"""
-
 import XPS_Q8_drivers
 import visa
 import time

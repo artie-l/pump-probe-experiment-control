@@ -1,12 +1,3 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Mon Jul 27 17:24:10 2020
-
-@author: XY
-"""
-
-
-
 import gui.gui_assembled as gui
 
 

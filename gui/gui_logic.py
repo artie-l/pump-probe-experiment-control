@@ -1,10 +1,3 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Thu Aug 23 11:00:27 2018
-
-@author: artml
-"""
-
 from datetime import date
 from numpy import savetxt
 

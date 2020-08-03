@@ -1,9 +1,3 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Mon Jul 27 16:41:04 2020
-
-@author: XY
-"""
 from numpy import array
 
 LIATconstVisual = ("10 mus", "30 mus", "100 mus", "300 mus", "1 ms", "3 ms",

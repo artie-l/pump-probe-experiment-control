@@ -4,7 +4,7 @@ Pump-probe experiment control is the graphical user interface (GUI) that designe
 
 This GUI is the "single-page" window with inputs for the time-resolved scan parameters, Lock-in Amplifier (LIA) controls, alignment tools, and plots with measured data sets. 
 
-It was made with a thought of setup simplicity, devices installation and modifiability of the programm itself. No prior programming knowledge required. 
+It was made with the intent of user-friendly software configuration, hardware initialization and modifiability of the GUI itself. No prior programming knowledge required. 
 
 ![alt text](https://github.com/artie-l/pump-probe-experiment-control/blob/master/GUI.png)
 

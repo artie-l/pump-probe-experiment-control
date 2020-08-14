@@ -13,7 +13,7 @@ It was made with the intent of user-friendly software configuration, hardware in
 * python 2.7
   - https://www.python.org/ftp/python/2.7/python-2.7.amd64.msi
   - https://repo.anaconda.com/archive/Anaconda2-2019.10-Windows-x86_64.exe
-    - For beginners I recommend Anaconda, as it comes with some necessary pre-installed packages, as it more user-friendly interface
+    - For beginners I recommend Anaconda, as it comes with some necessary pre-installed packages, and has novice-friendly interface
 * mttkinter
   - `pip install mttkinter`
 * NewPort XPS motion controller driver

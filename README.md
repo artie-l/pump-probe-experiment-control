@@ -6,7 +6,7 @@ This GUI is the "single-page" window with inputs for the time-resolved scan para
 
 It was made with a thought of setup simplicity, devices installation and modifiability of the programm itself. No prior programming knowledge required. 
 
-![GUI image will be here](http://full/path/to/img.jpg "Optional title")
+![alt text](https://github.com/artie-l/pump-probe-experiment-control/blob/master/GUI.png)
 
 ## Requirements
 

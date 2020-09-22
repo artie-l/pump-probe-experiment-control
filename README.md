@@ -26,7 +26,7 @@ It was made with the intent of user-friendly software configuration, hardware in
 
 # Setting-up the program
 
-First one needs to check if all requirements were met. This could be done by running the `path/filename.py` within the IDE or consol.  
+First one needs to check if all requirements were met. This could be done by running the `path/filename.py` within the IDE or python console.  
 
 ## LIA setup
 

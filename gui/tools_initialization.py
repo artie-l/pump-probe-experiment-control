@@ -118,14 +118,14 @@ if __name__ == "__main__":
 
     print(rm.list_resources())
 
-    # Connect to Lock-in, put the GPIB address of LIA enclosed in ''
-    lock_in = rm.open_resource('')
+    # Connect to Lock-in, put the GPIB or COM address of LIA enclosed in ''
+    # lock_in = rm.open_resource('')
 
     # Check connection by requesting ID
-    lock_in.query('*IDN?')
+    # print(lock_in.query('*IDN?'))
 
-    # If you recieve the correct IDN of LIA, you should change the line 129 argument, i.e. everything inside brackets ()
-    # by line's 129 argument(). Then, you can proceed by uncommenting the following code and re-running the program
+    # If you recieve the correct IDN of LIA, you should change the open_resource function's argument in line 45, i.e. everything inside brackets ()
+    # by open_resource function's argument() in line 129. Then, you can proceed by uncommenting the following code (lines 130:133) and re-running the program.
 
     # lia = LIA()
     # print(lia.get_idn())

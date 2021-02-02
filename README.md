@@ -60,7 +60,7 @@ Now, let's do a simple connection to LIA via Python:
 5. Uncomment line **122** and **125** by removing the `# `  in front of the code (Ctrl + 1 in Spyder).
 6. Re-run the script.
 
-If the correct `IDN` of the LIA was printed in the Python console, congratulations! We are almost done with the LIA setup. To finish the setup:
+If the correct `IDN` of the LIA was printed in the Python console, congratulations! We are almost done with the LIA configuration. The next steps are:
 
 1. Manually set the LIA's Sensitivity to 2V.
 2. Follow the text guide (lines 127-128) in the file.

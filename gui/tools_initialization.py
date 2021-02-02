@@ -126,7 +126,6 @@ if __name__ == "__main__":
 
     # If you recieve the correct IDN of LIA, you should change the open_resource function's argument in line 45, i.e. everything inside brackets ()
     # by open_resource function's argument() in line 129. Then, you can proceed by uncommenting the following code (lines 130:133) and re-running the program.
-    # More about argument of the function : https://www.w3schools.com/python/gloss_python_function_arguments.asp
 
     # lia = LIA()
     # print(lia.get_idn())

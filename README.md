@@ -4,9 +4,9 @@ Pump-probe experiment control is the graphical user interface (GUI) that designe
 
 This GUI is the "single-page" window with inputs for the time-resolved scan parameters, Lock-in Amplifier (LIA) controls, alignment tools, and plots with measured data sets. 
 
-It was made with the intent of user-friendly software configuration, hardware initialization and modifiability of the GUI itself. No prior programming knowledge required. 
+It was made with an intent of user-friendly software configuration, hardware initialization and modifiability of the GUI itself. No prior programming knowledge required. 
 
-![alt text](https://github.com/artie-l/pump-probe-experiment-control/blob/master/GUI.png)
+<figure><img src="https://i.ibb.co/bLRJ7M4/GUI.png" alt="GUI" border="0"><figcaption>Graphical User Interface</figcaption></figure>
 
 ## Requirements
 
@@ -26,7 +26,8 @@ It was made with the intent of user-friendly software configuration, hardware in
 
 # Setting-up the program
 
-First one needs to check if all requirements were met. This could be done by running the `path/filename.py` within the IDE or python console.  
+First one needs to check if all requirements were met. This could be done by running the `path/main.py` within the IDE or python console.  
+If you see the new window that popped-up, and it looks like @fig:description. At this point, user should configure the LIA and Delay Line. The necessary steps are explained in the respective sections. 
 
 ## LIA setup
 

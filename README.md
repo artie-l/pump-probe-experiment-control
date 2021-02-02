@@ -56,7 +56,7 @@ Now, let's do a simple connection to LIA via Python:
 1. Navigate to `userdir/gui/` folder and open `tools_initialization.py` in the IDE (Spyder, for example)
 2. Run the `tools_initialization.py` file (F5 in Spyder). 
 3. You should see the list of devices connected to your computer. 
-4. Copy and paste the full `GPIB` or `COM` address of the LIA to the line **122**, right between the `''` (To be sure, compare it with the one seen in Thermite).
+4. Copy and paste the full `GPIB` or `COM` address of the LIA to the line **122**, right between the `''` (To be sure, compare it with the one found in Thermite).
 5. Uncomment line **122** and **125** by removing the `# `  in front of the code (Ctrl + 1 in Spyder).
 6. Re-run the script.
 
@@ -68,7 +68,7 @@ If the correct `IDN` of the LIA was printed in the Python console, congratulatio
 4. Re-run the script.
 
 * If the sensitivity was changed, and `IDN` with the number was printed in the console, LIA has been sucesfully configured. 
-* If you encouner the error, try to repeat the steps and check if `rm.list_resources` argument on line 45 is the same as on line 119. 
+* If you encouner the error, try to repeat the steps and check if `rm.list_resources` [argument](https://www.w3schools.com/python/gloss_python_function_arguments.asp) on line 45 is the same as on line 119. 
 
 We can now proceed to the Delay Line setup.
 

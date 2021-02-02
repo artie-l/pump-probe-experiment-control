@@ -46,7 +46,7 @@ When the GUI is displayed, one shall proceed to the establishing the connection 
 We will start with the LIA:
 
 * Verify if the LIA model is **SR830**; 
-  - If not, procceed to the `https://github.com/artie-l/pump-probe-experiment-control/tree/master/gui` and follow instructions there.
+  - If not, procceed to the https://github.com/artie-l/pump-probe-experiment-control/tree/master/gui and follow the instructions there.
 * Verify if it is connected to the computer;
 * Turn ON the LIA;
 * Check that you can send and recieve the information via simple RS232 terminal (Thermite, for example https://www.compuphase.com/software_termite.htm#).

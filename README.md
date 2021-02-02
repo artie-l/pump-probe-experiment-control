@@ -67,7 +67,10 @@ If the correct `IDN` of the LIA was printed in the Python console, congratulatio
 3. Uncomment lines 130 to 133 inclusive.
 4. Re-run the script.
 
-If the sensitivity was changed, and `IDN` with the number was printed in the console, LIA has been sucesfully configured. We can now proceed to the Delay Line setup.
+* If the sensitivity was changed, and `IDN` with the number was printed in the console, LIA has been sucesfully configured. 
+* If you encouner the error, try to repeat the steps and check if `rm.list_resources` argument on line 45 is the same as on line 119. 
+
+We can now proceed to the Delay Line setup.
 
 ## Delay line setup
 
@@ -84,6 +87,6 @@ Now, we can proceed with the Python part:
 1. Navigate to `userdir/gui/` folder and open `gui_variables.py` in the IDE (Spyder, for example), in addition to already opened `tools_initialization.py` file.
 2. Locate the `DelayLines` variable (line 35 in the `gui_variables.py` file).
 3. Change its content (within the `( )`) to the **full names** of the Delay lines, enclosed in `''` and separated by coma.
- - If you are using only one delay line, do this
-4. Save the `gui_variables.py` file (Ctrl + S)
+    * If you are using only one delay line, do this
+4. Save and close the `gui_variables.py` file (Ctrl + S)
 5. 

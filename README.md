@@ -6,7 +6,9 @@ This GUI is the "single-page" window with inputs for the time-resolved scan para
 
 It was made with an intent of user-friendly software configuration, hardware initialization and modifiability of the GUI itself. No prior programming knowledge required. 
 
-<figure><img src="https://i.ibb.co/bLRJ7M4/GUI.png" alt="GUI" border="0"><figcaption>Graphical User Interface</figcaption></figure>
+![Voyage to the moon](https://i.ibb.co/bLRJ7M4/GUI.png)
+
+...is shown in figure [the figure](#Voyage-to-the-moon)...
 
 ## Requirements
 
@@ -27,7 +29,11 @@ It was made with an intent of user-friendly software configuration, hardware ini
 # Setting-up the program
 
 First one needs to check if all requirements were met. This could be done by running the `path/main.py` within the IDE or python console.  
-If you see the new window that popped-up, and it looks like @fig:description. At this point, user should configure the LIA and Delay Line. The necessary steps are explained in the respective sections. 
+If you see the new window that popped-up, and it looks like {#GUI}. At this point, user should configure the LIA and Delay Line. The necessary steps are explained in the respective sections. 
+
+![Figure @primitive_hut: The primitive hut](https://i.ibb.co/bLRJ7M4/GUI.png)
+
+As can be seen in Figure (@primitive_hut), huts may be primitive.
 
 ## LIA setup
 

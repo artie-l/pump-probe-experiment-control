@@ -43,7 +43,15 @@ Python 2.7 version is chosen because of compatibility with XPS Motion controller
 When the GUI is displayed, one shall proceed to the establishing the connection between the LIA, Delay Line and computer running the program.
 
 ## LIA setup
-We will start with the LIA. Verify if it is connected to the computer, and check that you can send and recieve the information via simple RS232 terminal (Thermite, for example https://www.compuphase.com/software_termite.htm#).
+We will start with the LIA:
+
+* Verify if the LIA model is **srs830**; 
+  - If not, procceed to the `` 
+* Verify if it is connected to the computer;
+* Turn ON the LIA;
+* Check that you can send and recieve the information via simple RS232 terminal (Thermite, for example https://www.compuphase.com/software_termite.htm#).
+
+Now, let's do a simple connection to LIA via Python:
 
 1. Navigate to `userdir/gui/` folder and open `tools_initialization.py` in the IDE (Spyder, for example)
 2. Run the `tools_initialization.py` file (F5 in Spyder). 
@@ -52,4 +60,12 @@ We will start with the LIA. Verify if it is connected to the computer, and check
 5. Uncomment line **122** and **125** by removing the `# ` in front of the code.
 6. Re-run the script.
 
+If the correct `IDN` of the LIA was printed in the Python console, congratulations! We are almost done with the LIA setup. To finish the setup:
+
+1. Manually set the LIA's Sensitivity to 2V.
+2. Follow the text guide in the file
+3. Uncomment lines 130 to 133 inclusive.
+4. Re-run the script.
+
+If the sensitivity was changed, 
 ## Delay line setup

@@ -45,7 +45,7 @@ When the GUI is displayed, one shall proceed to the establishing the connection 
 ## LIA setup
 We will start with the LIA. Verify if it is connected to the computer, and check that you can send and recieve the information via simple RS232 terminal (Thermite, for example https://www.compuphase.com/software_termite.htm#).
 
-1. navigate to `userdir/gui/` folder and open `tools_initialization.py` in the IDE (Spyder, for example)
+1. Navigate to `userdir/gui/` folder and open `tools_initialization.py` in the IDE (Spyder, for example)
 2. Run the `tools_initialization.py` file (F5 in Spyder). 
 3. You should see the list of devices connected to your computer. 
 4. Copy and paste the full `GPIB` or `COM` adress of the LIA to the line **122**, right between the `''` (To be sure, compare it with the one seen in Thermite).

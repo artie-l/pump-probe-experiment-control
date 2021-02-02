@@ -10,6 +10,9 @@ It was made with an intent of user-friendly software configuration, hardware ini
 
 ## Requirements
 
+One can copy-paste `pip` commands to install the nesessary packages. 
+Python 2.7 version is chosen because of compatibility with XPS Motion controller driver. One can use the https://github.com/pyepics/newportxps repo which is compatible with Python 3+.
+
 * python 2.7
   - https://www.python.org/ftp/python/2.7/python-2.7.amd64.msi
   - https://repo.anaconda.com/archive/Anaconda2-2019.10-Windows-x86_64.exe
@@ -20,15 +23,20 @@ It was made with an intent of user-friendly software configuration, hardware ini
   - ftp://download.newport.com/MotionControl/Current/MotionControllers/XPS-Q/Drivers/python/XPS_Q8_drivers.py
 * numpy
   - `pip install numpy`
-* will be completed later
-
+* matplotlib
+  - `pip install matplotlib`
+* visa
+  - `pip install PyVISA`
 * LIA user manual
-
+  - To know the form of queries and commands
+* Access to XPS motion controller Web-Interface
+  - IP, Login, Password, Delay Stage name
+  
 # Setting-up the program
 
-First one needs to check if all requirements were met. This could be done by running the `path/main.py` within the IDE or python console.  
-If you see the new window that popped-up, and it looks like {#GUI}. At this point, user should configure the LIA and Delay Line. The necessary steps are explained in the respective sections. 
-
+First one needs to check if all requirements were met. This could be done by running the `path/main.py` within the IDE, python console or running the `Manip Control.cmd`.  
+* If you see the new window that popped-up, and it looks like the one at the top of the page, congratulations! Only communication with measurement instruments should be established!
+* If you encountered an error, maybe the specific component is missing. Check the error log and see if everything from **Requirements** section is installed. 
 
 ## LIA setup
 

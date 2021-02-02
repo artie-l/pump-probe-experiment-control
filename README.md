@@ -47,6 +47,9 @@ We will start with the LIA. Verify if it is connected to the computer, and check
 
 1. navigate to `userdir/gui/` folder and open `tools_initialization.py` in the IDE (Spyder, for example)
 2. Run the `tools_initialization.py` file (F5 in Spyder). 
-3.
+3. You should see the list of devices connected to your computer. 
+4. Copy and paste the full `GPIB` or `COM` adress of the LIA to the line **122**, right between the `''` (To be sure, compare it with the one seen in Thermite).
+5. Uncomment line **122** and **125** by removing the `# ` in front of the code.
+6. Re-run the script.
 
 ## Delay line setup

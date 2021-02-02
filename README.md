@@ -32,7 +32,7 @@ Python 2.7 version is chosen because of compatibility with XPS Motion controller
 * LIA user manual
   - To know the form of queries and commands
 * Access to XPS motion controller Web-Interface
-  - IP, Login, Password, Delay Stage name
+  - IP, Login, Password, Delay Stage names
   
 # Program setup and first launch
 * Download the ZIP file and extract it to desired directory (`userdir/`). 

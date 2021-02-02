@@ -46,7 +46,7 @@ When the GUI is displayed, one shall proceed to the establishing the connection 
 We will start with the LIA:
 
 * Verify if the LIA model is **SR830**; 
-  - If not, procceed to the https://github.com/artie-l/pump-probe-experiment-control/tree/master/gui and follow the instructions there.
+  - If not, procceed to the https://github.com/artie-l/pump-probe-experiment-control/tree/master/gui and follow the instructions.
 * Verify if it is connected to the computer;
 * Turn ON the LIA;
 * Check that you can send and recieve the information via simple RS232 terminal (Thermite, for example https://www.compuphase.com/software_termite.htm#).
@@ -63,9 +63,10 @@ Now, let's do a simple connection to LIA via Python:
 If the correct `IDN` of the LIA was printed in the Python console, congratulations! We are almost done with the LIA setup. To finish the setup:
 
 1. Manually set the LIA's Sensitivity to 2V.
-2. Follow the text guide in the file
+2. Follow the text guide (lines 127-128) in the file.
 3. Uncomment lines 130 to 133 inclusive.
 4. Re-run the script.
 
-If the sensitivity was changed, 
+If the sensitivity was changed, and `IDN` with the number was printed in the console, LIA has been configured. We can now proceed to the Delay Line configuration.
+
 ## Delay line setup

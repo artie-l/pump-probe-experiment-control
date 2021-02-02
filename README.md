@@ -67,6 +67,6 @@ If the correct `IDN` of the LIA was printed in the Python console, congratulatio
 3. Uncomment lines 130 to 133 inclusive.
 4. Re-run the script.
 
-If the sensitivity was changed, and `IDN` with the number was printed in the console, LIA has been configured. We can now proceed to the Delay Line configuration.
+If the sensitivity was changed, and `IDN` with the number was printed in the console, LIA has been sucesfully configured. We can now proceed to the Delay Line setup.
 
 ## Delay line setup

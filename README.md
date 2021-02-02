@@ -57,7 +57,7 @@ Now, let's do a simple connection to LIA via Python:
 2. Run the `tools_initialization.py` file (F5 in Spyder). 
 3. You should see the list of devices connected to your computer. 
 4. Copy and paste the full `GPIB` or `COM` adress of the LIA to the line **122**, right between the `''` (To be sure, compare it with the one seen in Thermite).
-5. Uncomment line **122** and **125** by removing the `# ` in front of the code.
+5. Uncomment line **122** and **125** by removing the `# `  in front of the code.
 6. Re-run the script.
 
 If the correct `IDN` of the LIA was printed in the Python console, congratulations! We are almost done with the LIA setup. To finish the setup:

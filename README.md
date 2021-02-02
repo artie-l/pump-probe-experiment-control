@@ -32,12 +32,17 @@ Python 2.7 version is chosen because of compatibility with XPS Motion controller
 * Access to XPS motion controller Web-Interface
   - IP, Login, Password, Delay Stage name
   
-# Setting-up the program
-
-First one needs to check if all requirements were met. This could be done by running the `path/main.py` within the IDE, python console or running the `Manip Control.cmd`.  
+# Program setup and first launch
+* Download the ZIP file and extract it to desired directory (`userdir`). 
+* First one needs to check if all requirements were met. This could be done by running the `userdir/main.py` within the IDE, python console or running the `userdir/Manip Control.cmd`.  
 * If you see the new window that popped-up, and it looks like the one at the top of the page, congratulations! Only communication with measurement instruments should be established!
-* If you encountered an error, maybe the specific component is missing. Check the error log and see if everything from **Requirements** section is installed. 
+* If you encountered an error, most likely the specific component is missing. Check the error log and see if everything from **Requirements** section is installed. 
+
+When the GUI is displayed, one shall proceed to the establishing the connection between the LIA, Delay Line and computer running the program.
 
 ## LIA setup
+We will start with the LIA. Verify if it is connected to the computer, and check that you can send and recieve the information via simple RS232 terminal (Thermite, for example https://www.compuphase.com/software_termite.htm#).
+
+Then, navigate to `userdir/gui/` folder
 
 ## Delay line setup

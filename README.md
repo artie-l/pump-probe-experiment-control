@@ -70,3 +70,20 @@ If the correct `IDN` of the LIA was printed in the Python console, congratulatio
 If the sensitivity was changed, and `IDN` with the number was printed in the console, LIA has been sucesfully configured. We can now proceed to the Delay Line setup.
 
 ## Delay line setup
+
+This script supports multiple delay lines, that you can easily choose before the scan. To proceed with the setup:
+
+* Turn on the XPS controller.
+* Go to the XPS web-interface (Computer should be connected to the XPS via Ethernet cable).
+* Write down the XPS web-interface url address (should be something like `192.168.0.254`)
+* Log in as administrator and go to Stages or smth... To be checked.
+* Write down the **full names** of the delay lines you want to use (should be something like `Group1.Pos` or `GROUP1.POSITIONER`)
+
+Now, we can proceed with the Python part:
+
+1. Navigate to `userdir/gui/` folder and open `gui_variables.py` in the IDE (Spyder, for example), in addition to already opened `tools_initialization.py` file.
+2. Locate the `DelayLines` variable (line 35 in the `gui_variables.py` file).
+3. Change its content (within the `( )`) to the **full names** of the Delay lines, enclosed in `''` and separated by coma.
+ - If you are using only one delay line, do this
+4. Save the `gui_variables.py` file (Ctrl + S)
+5. 

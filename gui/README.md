@@ -2,6 +2,7 @@
 
 ![Program layout](https://i.ibb.co/QX3QTdj/program-structure.png "Program Layout")
 
+----
 
 - [Program structure explanation](#program-structure-explanation)
   * [main](#main)
@@ -23,6 +24,7 @@
     + [measurement functions.py](#measurement-functionspy)
     + [gui variables.py](#gui-variablespy)
 
+----
 
 # Program structure explanation
 Text

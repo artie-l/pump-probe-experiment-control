@@ -1,66 +1,64 @@
-- [Supplementary information and Troubleshooting](#supplementary-information-and-troubleshooting)
-  * [Program structure explanation](#program-structure-explanation)
-    + [main](#main)
-    + [gui_assembled](#gui-assembled)
-    + [GUI elements category](#gui-elements-category)
-      - [gui_scan_params](#gui-scan-params)
-      - [gui_filepath_entries](#gui-filepath-entries)
-      - [gui_rt_lia](#gui-rt-lia)
-      - [gui_data_graphs](#gui-data-graphs)
-      - [gui_lia_controls](#gui-lia-controls)
-      - [gui_chopper_controls](#gui-chopper-controls)
-      - [gui_delay_line_controls](#gui-delay-line-controls)
-      - [gui_scan_controls](#gui-scan-controls)
-    + [GUI logic category](#gui-logic-category)
-      - [gui_logic](#gui-logic)
-    + [Hardware category](#hardware-category)
-      - [tools_initialization](#tools-initialization)
-    + [Uncategorized files](#uncategorized-files)
-      - [measurement_functions](#measurement-functions)
-      - [gui_variables](#gui-variables)
-
-
----- 
-
 # Supplementary information and Troubleshooting
 
 ![Program layout](https://i.ibb.co/QX3QTdj/program-structure.png "Program Layout")
 
-## Program structure explanation
+
+- [Program structure explanation](#program-structure-explanation)
+  * [main](#main)
+  * [gui assembled.py](#gui-assembledpy)
+  * [GUI elements category](#gui-elements-category)
+    + [gui scan params.py](#gui-scan-paramspy)
+    + [gui filepath entries.py](#gui-filepath-entriespy)
+    + [gui rt lia.py](#gui-rt-liapy)
+    + [gui data graphs.py](#gui-data-graphspy)
+    + [gui lia controls.py](#gui-lia-controlspy)
+    + [gui chopper controls.py](#gui-chopper-controlspy)
+    + [gui delay line controls.py](#gui-delay-line-controlspy)
+    + [gui scan controls.py](#gui-scan-controlspy)
+  * [GUI logic category](#gui-logic-category)
+    + [gui logic.py](#gui-logicpy)
+  * [Hardware category](#hardware-category)
+    + [tools initialization.py](#tools-initializationpy)
+  * [Uncategorized files](#uncategorized-files)
+    + [measurement functions.py](#measurement-functionspy)
+    + [gui variables.py](#gui-variablespy)
+
+
+# Program structure explanation
 Text
-### main
+## main
 text
-### gui_assembled
+## gui assembled.py
 text
-### GUI elements category
+## GUI elements category
 text
-#### gui_scan_params
+### gui scan params.py
 text
-####  gui_filepath_entries
+###  gui filepath entries.py
 text
-#### gui_rt_lia
+### gui rt lia.py
 text
-#### gui_data_graphs
+### gui data graphs.py
 text
-#### gui_lia_controls
+### gui lia controls.py
 text
-#### gui_chopper_controls
+### gui chopper controls.py
 text
-#### gui_delay_line_controls
+### gui delay line controls.py
 text
-#### gui_scan_controls
+### gui scan controls.py
 text
-### GUI logic category
+## GUI logic category
 text
-#### gui_logic
+### gui logic.py
 text
-### Hardware category
+## Hardware category
 text
-#### tools_initialization
+### tools initialization.py
 text
-### Uncategorized files
+## Uncategorized files
 text
-#### measurement_functions
+### measurement functions.py
 text
-#### gui_variables
+### gui variables.py
 text

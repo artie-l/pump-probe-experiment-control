@@ -1,11 +1,12 @@
 # pump-probe-experiment-control 
 
+### Navigation:
   * [Requirements](#requirements)
 - [Program setup and first launch](#program-setup-and-first-launch)
   * [LIA setup](#lia-setup)
   * [Delay line setup](#delay-line-setup)
   
----
+# 
 
 Pump-probe experiment control is the graphical user interface (GUI) that designed to simplify, automatize, and visualize the data acquisition process.
 

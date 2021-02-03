@@ -1,7 +1,7 @@
 # Supplementary information and Troubleshooting
 
 ![Program layout](https://i.ibb.co/QX3QTdj/program-structure.png "Program Layout")
-# 
+
 ## Navigation:
 - [Program structure](#program-structure)
   * [main](#main)

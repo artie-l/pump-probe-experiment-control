@@ -22,8 +22,8 @@
   * [Uncategorized files](#uncategorized-files)
     + [measurement functions.py](#measurement-functionspy)
     + [gui variables.py](#gui-variablespy)
-
-----
+    
+# 
 
 # Program structure
 Text

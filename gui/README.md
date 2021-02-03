@@ -2,9 +2,7 @@
 
 ![Program layout](https://i.ibb.co/QX3QTdj/program-structure.png "Program Layout")
 
-----
-
-- [Program structure explanation](#program-structure)
+- [Program structure](#program-structure)
   * [main](#main)
   * [gui assembled.py](#gui-assembledpy)
   * [GUI elements category](#gui-elements-category)

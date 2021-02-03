@@ -1,5 +1,12 @@
 # pump-probe-experiment-control 
 
+  * [Requirements](#requirements)
+- [Program setup and first launch](#program-setup-and-first-launch)
+  * [LIA setup](#lia-setup)
+  * [Delay line setup](#delay-line-setup)
+  
+---
+
 Pump-probe experiment control is the graphical user interface (GUI) that designed to simplify, automatize, and visualize the data acquisition process.
 
 This GUI is the "single-page" window with inputs for the time-resolved scan parameters, Lock-in Amplifier (LIA) controls, alignment tools, and plots with measured data sets. 
@@ -7,6 +14,7 @@ This GUI is the "single-page" window with inputs for the time-resolved scan para
 It was made with an intent of user-friendly software configuration, hardware initialization and modifiability of the GUI itself. No prior programming knowledge required. 
 
 ![Compiled GUI](https://i.ibb.co/bLRJ7M4/GUI.png "Compiled GUI")
+
 
 ## Requirements
 

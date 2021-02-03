@@ -1,3 +1,3 @@
 # Supplementary information & Troubleshooting
 
-![Program layout](https://i.ibb.co/RHFpP4G/Untitled-Diagram-1.png "Program Layout")
+![Program layout](https://i.ibb.co/qngkCVj/Untitled-Diagram-2.png "Program Layout")

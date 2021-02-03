@@ -4,7 +4,7 @@
 
 ----
 
-- [Program structure explanation](#program-structure-explanation)
+- [Program structure explanation](#program-structure)
   * [main](#main)
   * [gui assembled.py](#gui-assembledpy)
   * [GUI elements category](#gui-elements-category)
@@ -26,7 +26,7 @@
 
 ----
 
-# Program structure explanation
+# Program structure
 Text
 ## main
 text

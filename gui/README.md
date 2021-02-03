@@ -1,4 +1,4 @@
 # Supplementary information & Troubleshooting
 
-![Program layout](https://i.ibb.co/qngkCVj/Untitled-Diagram-2.png "Program Layout")
+![Program layout](https://i.ibb.co/QX3QTdj/program-structure.png "Program Layout")
  okay

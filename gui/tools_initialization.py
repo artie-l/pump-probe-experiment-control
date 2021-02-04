@@ -12,7 +12,7 @@ class DelayLine():
         
         # Delay Line initialization
         self.myxps = XPS_Q8_drivers.XPS()    # Connect to the XPS
-        self.socketId = self.myxps.TCP_ConnectToServer('192.168.0.254', 5001, 20)   # Check connection passed
+        self.socketId = self.myxps.TCP_ConnectToServer('XPS_web_ip', 5001, 20)   # Check connection passed
         if (self.socketId == -1):
             print ('Connection to XPS failed, check IP & Port')
             
@@ -23,8 +23,8 @@ class DelayLine():
             self.myxps.GroupHomeSearch(self.socketId, group)  # Home search
         
         
-    def move_to(self, position):
-        self.myxps.GroupMoveAbsolute(self.socketId, self.controller.positioner,
+    def move_to(self, position, positioner=self.controller.positioner):
+        self.myxps.GroupMoveAbsolute(self.socketId, positioner,
                                      [position]
                                      )
     def set_velocity(self, velocity):
@@ -42,7 +42,7 @@ class LIA():
         # Initialization of LIA
         self.rm = visa.ResourceManager()
         self.rm.list_resources()
-        self.lock_in = self.rm.open_resource('')
+        self.lock_in = self.rm.open_resource('resource_name')
         time.sleep(0.02)
         
         # Parameters setup
@@ -119,7 +119,7 @@ if __name__ == "__main__":
     print(rm.list_resources())
 
     # Connect to Lock-in, put the GPIB or COM address of LIA enclosed in ''
-    # lock_in = rm.open_resource('')
+    # lock_in = rm.open_resource('resource_name')
 
     # Check connection by requesting ID
     # print(lock_in.query('*IDN?'))
@@ -136,6 +136,13 @@ if __name__ == "__main__":
     ## We will proceed with Delay Line setup, by uncommenting the code below
 
     # myxps = XPS_Q8_drivers.XPS()    # Connect to the XPS
-    # socketId = myxps.TCP_ConnectToServer('192.168.0.254', 5001, 20)   # Check connection passed
+    # socketId = myxps.TCP_ConnectToServer('XPS_web_ip', 5001, 20)   # Check connection passed
     # if (socketId == -1):
     #     print ('Connection to XPS failed, check IP & Port')
+    
+    ## Now we will check if the DelayLine class works: 
+    
+    # controller = 'Just a dummy variable' # Used to pass something in the DelayLine class, just fpr the test
+    # delay_line = DelayLine(controller)
+    # position = 25 # in mm
+    # delay_line.move_to(25)

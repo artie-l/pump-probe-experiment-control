@@ -5,7 +5,8 @@
 - [Program setup and first launch](#program-setup-and-first-launch)
   * [LIA setup](#lia-setup)
   * [Delay line setup](#delay-line-setup)
-  
+- [How to launch the software](#how-to-launch-the-software)
+- [What to be changed in the future](#what-to-be-changed-in-the-future)
 # 
 
 Pump-probe experiment control is the graphical user interface (GUI) that designed to simplify, automatize, and visualize the data acquisition process.
@@ -65,20 +66,20 @@ Now, let's do a simple connection to LIA via Python:
 1. Navigate to `userdir/gui/` folder and open `tools_initialization.py` in the IDE (Spyder, for example)
 2. Run the `tools_initialization.py` file (F5 in Spyder). 
 3. You should see the list of devices connected to your computer. 
-4. Replace the `resource_name` (do not remove the `''` inside the parentheses) on line **122** by the full `GPIB` or `COM` address of the LIA. 
+4. Replace the `resource_name` (do not remove the `''` inside the parentheses) on line **126** by the full `GPIB` or `COM` address of the LIA (do not include `u`). 
    * To be sure if the adress is correct, compare it with the one found in Thermite;
-5. Uncomment line **122** and **125** by removing the `# `  in front of the code (Ctrl + 1 in Spyder).
+5. Uncomment line **126** and **129** by removing the `# `  in front of the code (Ctrl + 1 in Spyder).
 6. Re-run the script.
 
 If the correct `IDN` of the LIA was printed in the Python console, congratulations! We are almost done with the LIA configuration. The next steps are:
 
 1. Manually set the LIA's Sensitivity to 2V.
-2. Follow the text guide (lines 127-128) in the file.
-3. Uncomment lines 130 to 133 inclusive.
+2. Follow the text guide (lines 131-132) in the file.
+3. Uncomment lines 134 to 138.
 4. Re-run the script.
 
 * If the sensitivity was changed, and `IDN` with the number was printed in the console, LIA has been sucesfully configured. 
-* If you encouner the error, try to repeat the steps and check if `rm.list_resources` [argument](https://www.w3schools.com/python/gloss_python_function_arguments.asp) on line 45 is the same as on line 119. 
+* If you encouner the error, try to repeat the beforementioned steps and check if `rm.list_resources` [argument](https://www.w3schools.com/python/gloss_python_function_arguments.asp) on line 49 is the same as on line 126. 
 
 We can now proceed to the Delay Line setup.
 
@@ -99,8 +100,29 @@ Now, we can proceed with the Python part:
 3. Change its content (within the `( )`) to the **full names** of the Delay lines, enclosed in `''` and separated by coma.
     * If you are using only one delay line, the `DelayLines` variable should be defined as `DelayLines = ('full_delay_line_name', )`
 4. Save and close the `gui_variables.py` file (Ctrl + S)
-5. Uncomment lines 130 to 141 in `tools_initialization.py`
-6. Replace `XPS_web_ip` (do not remove the `''` inside the parentheses) by the IP address used to acess the XPS web-interface.
+5. Uncomment lines 142 to 145 in `tools_initialization.py`
+6. Replace `XPS_web_ip`on line 143 (do not remove the `''` inside the parentheses) by the IP address used to acess the XPS web-interface.
 7. Run the code.
 
-If 
+If you see no message printed in the console, it means that the connection to the XPS was established correctly. Now we will modify the DelayLine class:
+
+1. Replace the `XPS_web_ip` on line 15 by the by the IP address used to acess the XPS web-interface.
+2. Uncomment the lines 149 to 152
+3. Re-run the script 
+4. Check in the XPS web-interface if the position of the delay-line has been changed to 25 mm
+
+If you have no errors, and delay line moved, congratulations. You can now use the software!
+
+# How to launch the software
+
+Normally, the program launch could be done in the two ways:
+
+1. By double-clicking the `Manip Control.cmd`.
+  * If this does not work, check if the python was added to the SYSTEM path: [Here is the guide](https://geek-university.com/python/add-python-to-the-windows-path/)
+2. By executing the `main.py` within the IDE (Spyder for example)
+
+# What to be changed in the future
+
+1.
+2. 
+3. 

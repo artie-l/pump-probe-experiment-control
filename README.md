@@ -128,4 +128,3 @@ Since I am at the last year of my PhD, there is almost no time prioritize the fo
   * The good candidate is here: https://github.com/pyepics/newportxps. It should require the modification of `tools_initialization.py` file.
 2. First-launch setup window, to configure the LIA and DelayLines.
 3. The Windows/Linux installer.
-3. 

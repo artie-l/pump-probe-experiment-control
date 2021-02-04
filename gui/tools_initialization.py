@@ -23,7 +23,11 @@ class DelayLine():
             self.myxps.GroupHomeSearch(self.socketId, group)  # Home search
         
         
-    def move_to(self, position, positioner=self.controller.positioner):
+    def move_to(self, position, test=False):
+        if not test:
+            positioner = self.controller.positioner
+        else:
+            positioner = DelayLines[0]
         self.myxps.GroupMoveAbsolute(self.socketId, positioner,
                                      [position]
                                      )
@@ -119,30 +123,30 @@ if __name__ == "__main__":
     print(rm.list_resources())
 
     # Connect to Lock-in, put the GPIB or COM address of LIA enclosed in ''
-    # lock_in = rm.open_resource('resource_name')
+    #lock_in = rm.open_resource('resource_name')
 
-    # Check connection by requesting ID
-    # print(lock_in.query('*IDN?'))
+    ## Check connection by requesting ID
+    #print(lock_in.query('*IDN?'))
 
-    # If you recieve the correct IDN of LIA, you should change the open_resource function's argument in line 45, i.e. everything inside brackets ()
-    # by open_resource function's argument() in line 129. Then, you can proceed by uncommenting the following code (lines 130:133) and re-running the program.
+    ## If you recieve the correct IDN of LIA, you should change the open_resource function's argument in line 45, i.e. everything inside brackets ()
+    ## by open_resource function's argument() in line 129. Then, you can proceed by uncommenting the following code (lines 130:133) and re-running the program.
 
-    # lia = LIA()
-    # print(lia.get_idn())
-    # print(lia.get_tconst()
-    # lia.set_sens(1)
+    #lia = LIA()
+    #print(lia.get_idn())
+    #print(lia.get_tconst()
+    #lia.set_sens(1)
 
     ## If the sensitivity was changed and IDN and a number were printed in console, the LIA is ready to work.
     ## We will proceed with Delay Line setup, by uncommenting the code below
 
-    # myxps = XPS_Q8_drivers.XPS()    # Connect to the XPS
-    # socketId = myxps.TCP_ConnectToServer('XPS_web_ip', 5001, 20)   # Check connection passed
-    # if (socketId == -1):
-    #     print ('Connection to XPS failed, check IP & Port')
+    #myxps = XPS_Q8_drivers.XPS()    # Connect to the XPS
+    #socketId = myxps.TCP_ConnectToServer('XPS_web_ip', 5001, 20)   # Check connection passed
+    #   if (socketId == -1):
+    #   print ('Connection to XPS failed, check IP & Port')
     
     ## Now we will check if the DelayLine class works: 
     
-    # controller = 'Just a dummy variable' # Used to pass something in the DelayLine class, just fpr the test
-    # delay_line = DelayLine(controller)
-    # position = 25 # in mm
-    # delay_line.move_to(25)
+    #controller = 'Just a dummy variable' # Used to pass something in the DelayLine class, just fpr the test
+    #delay_line = DelayLine(controller)
+    #position = 25 # in mm
+    #delay_line.move_to(position, test=True)

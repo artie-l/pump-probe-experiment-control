@@ -107,9 +107,9 @@ Now, we can proceed with the Python part:
 If you see no message printed in the console, it means that the connection to the XPS was established correctly. Now we will modify the DelayLine class:
 
 1. Replace the `XPS_web_ip` on line 15 by the by the IP address used to acess the XPS web-interface.
-2. Uncomment the lines 149 to 152
-3. Re-run the script 
-4. Check in the XPS web-interface if the position of the delay-line has been changed to 25 mm
+2. Uncomment the lines 149 to 152.
+3. Re-run the script.
+4. Check in the XPS web-interface if the position of the delay-line has been changed to 25 mm.
 
 If you have no errors, and delay line moved, congratulations. You can now use the software!
 
@@ -118,8 +118,8 @@ If you have no errors, and delay line moved, congratulations. You can now use th
 Normally, the program launch could be done in the two ways:
 
 1. By double-clicking the `Manip Control.cmd`.
-   * If this does not work, check if the python was added to the SYSTEM path: [Here is the guide](https://geek-university.com/python/add-python-to-the-windows-path/)
-2. By executing the `main.py` within the IDE (Spyder for example)
+   * If this does not work, check if the python was added to the SYSTEM path. You can simply follow this [guide](https://geek-university.com/python/add-python-to-the-windows-path/).
+2. By executing the `main.py` within the IDE (Spyder for example).
 
 # What to be changed in the future
 

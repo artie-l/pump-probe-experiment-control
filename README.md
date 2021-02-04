@@ -118,7 +118,7 @@ If you have no errors, and delay line moved, congratulations. You can now use th
 Normally, the program launch could be done in the two ways:
 
 1. By double-clicking the `Manip Control.cmd`.
-  * If this does not work, check if the python was added to the SYSTEM path: [Here is the guide](https://geek-university.com/python/add-python-to-the-windows-path/)
+   * If this does not work, check if the python was added to the SYSTEM path: [Here is the guide](https://geek-university.com/python/add-python-to-the-windows-path/)
 2. By executing the `main.py` within the IDE (Spyder for example)
 
 # What to be changed in the future

@@ -55,7 +55,7 @@ When the GUI is displayed, one shall proceed to the establishing the connection 
 We will start with the LIA:
 
 * Verify if the LIA model is **SR830**; 
-  - If not, procceed to the https://github.com/artie-l/pump-probe-experiment-control/tree/master/gui and follow the instructions.
+  - If not, procceed to the https://github.com/artie-l/pump-probe-experiment-control/tree/master/gui/README.md and follow the instructions.
 * Verify if it is connected to the computer;
 * Turn ON the LIA;
 * Check that you can send and recieve the information via simple RS232 terminal (Thermite, for example https://www.compuphase.com/software_termite.htm#).
@@ -65,7 +65,8 @@ Now, let's do a simple connection to LIA via Python:
 1. Navigate to `userdir/gui/` folder and open `tools_initialization.py` in the IDE (Spyder, for example)
 2. Run the `tools_initialization.py` file (F5 in Spyder). 
 3. You should see the list of devices connected to your computer. 
-4. Copy and paste the full `GPIB` or `COM` address of the LIA to the line **122**, right between the `''` (To be sure, compare it with the one found in Thermite).
+4. Replace the `resource_name` (do not remove the `''` inside the parentheses) on line **122** by the full `GPIB` or `COM` address of the LIA. 
+   * To be sure if the adress is correct, compare it with the one found in Thermite;
 5. Uncomment line **122** and **125** by removing the `# `  in front of the code (Ctrl + 1 in Spyder).
 6. Re-run the script.
 
@@ -96,6 +97,10 @@ Now, we can proceed with the Python part:
 1. Navigate to `userdir/gui/` folder and open `gui_variables.py` in the IDE (Spyder, for example), in addition to already opened `tools_initialization.py` file.
 2. Locate the `DelayLines` variable (line 35 in the `gui_variables.py` file).
 3. Change its content (within the `( )`) to the **full names** of the Delay lines, enclosed in `''` and separated by coma.
-    * If you are using only one delay line, do this
+    * If you are using only one delay line, the `DelayLines` variable should be defined as `DelayLines = ('full_delay_line_name', )`
 4. Save and close the `gui_variables.py` file (Ctrl + S)
-5. 
+5. Uncomment lines 130 to 141 in `tools_initialization.py`
+6. Replace `XPS_web_ip` (do not remove the `''` inside the parentheses) by the IP address used to acess the XPS web-interface.
+7. Run the code.
+
+If 

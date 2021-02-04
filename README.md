@@ -125,6 +125,6 @@ Normally, the program launch could be done in the two ways:
 Since I am at the last year of my PhD, there is almost no time prioritize the following things. Nevertheless, following features are still in plans, and might be released in the near future:
 
 1. The Newport XPS python drivers, as it is the only thing that forces this program to be run with Python 2.7.
-   * The good candidate is here: https://github.com/pyepics/newportxps. It should require the modification of `tools_initialization.py` file.
-2. First-launch setup window, to configure the LIA and DelayLines.
+   * The good candidate is here: https://github.com/pyepics/newportxps. It should require only the modification of `tools_initialization.py` file.
+2. First-launch setup window, to configure the LIA and DelayLines, in order not to mess with the .py files.
 3. The Windows/Linux installer.

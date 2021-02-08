@@ -113,7 +113,7 @@ Now, let's do a simple connection to LIA via Python:
 2. Run the `tools_initialization.py` file (F5 in Spyder). 
 3. You should see the list of devices connected to your computer. 
 4. Replace the `resource_name` (do not remove the `''` inside the parentheses) on line **126** by the full `GPIB` or `COM` address of the LIA (do not include `u`). 
-   * To be sure if the adress is correct, compare it with the one found in Thermite;
+   - To be sure if the adress is correct, compare it with the one found in Thermite;
 5. Uncomment line **126** and **129** by removing the `# `  in front of the code (Ctrl + 1 in Spyder).
 6. Re-run the script.
 
@@ -157,7 +157,7 @@ If you see no message printed in the console, it means that the connection to th
 3. Re-run the script.
 4. Check in the XPS web-interface if the position of the delay-line has been changed to 25 mm.
 
-If you have no errors, and delay line moved, congratulations. You can now use the software!
+If you have no errors, and delay line moved, congratulations. Save the `tools_initialization.py` as is and you can now use the software!
 
 # How to launch the software
 

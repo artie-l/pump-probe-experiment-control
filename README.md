@@ -2,7 +2,7 @@
 
 ### Navigation:
 - [Features](#features)
-  * [Requirements](#requirements)
+- [Requirements](#requirements)
 - [Program setup and first launch](#program-setup-and-first-launch)
   * [LIA setup](#lia-setup)
   * [Delay line setup](#delay-line-setup)
@@ -59,7 +59,7 @@ It was made with an intent of user-friendly software configuration, hardware ini
 13. **Take a screenshot**:
     * Save a printscreen, to compare the scan parameters in future.
 
-## Requirements
+# Requirements
 
 One can copy-paste `pip` commands to install the nesessary packages. 
 Python 2.7 version is chosen because of compatibility with XPS Motion controller driver. One can use the https://github.com/pyepics/newportxps repo which is compatible with Python 3+.

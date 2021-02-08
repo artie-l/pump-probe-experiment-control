@@ -94,7 +94,7 @@ The file initializes a `Frame`, that contains one `LabelFrame` with:
 3. `change_tconst` function, that changes the time constant of the LIA when specific value is chosen.
 3. `change_sens` function, that changes the sensitivity of the LIA when specific value is chosen.
 
-This file imports the `LIATconstVisual` and `LIASensVisual` values from the `gui_variables.py`, in order to display them in the combobox. Normally, the LIA takes the values from 0 to n for the time constant and sensitivity. The indexes of a value in `LIATconstVisual` and `LIASensVisual` correspond to the value that one should send to LIA to set the respective time constant or sensitivity.
+This file imports the `LIATconstVisual` and `LIASensVisual` values from the `gui_variables.py`([link](#gui-variablespy)), in order to display them in the combobox. Normally, the LIA takes the values from 0 to n for the time constant and sensitivity. The indexes of a value in `LIATconstVisual` and `LIASensVisual` correspond to the value that one should send to LIA to set the respective time constant or sensitivity.
 
 One can add more options in analogy with the code presented here.
 ### gui chopper controls.py

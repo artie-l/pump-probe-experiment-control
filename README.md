@@ -78,6 +78,10 @@ Python 2.7 version is chosen because of compatibility with XPS Motion controller
   - `pip install PyVISA`
 * PyVISA-py
   - `pip install PyVISA-py`
+* PILLOW
+  - `pip install pillow`
+* Pyautogui
+  - `pip install pyautogui`
 * LIA user manual
   - To know the form of queries and commands
 * Access to XPS motion controller Web-Interface

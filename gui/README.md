@@ -98,7 +98,7 @@ This file imports the `LIATconstVisual` and `LIASensVisual` values from the `gui
 
 One can add more options in analogy with the code presented here.
 ### gui chopper controls.py
-This file creates the `LIA parameters` section in the GUI. It is used to change the sensitivity and time constant of the LIA. 
+This file creates the `Chopper Frequency` section in the GUI. It is disabled by the default. If you have the Chopper that can be controlled with the  
 The file initializes a `Frame`, that contains one `LabelFrame` with:
 ### gui delay line controls.py
 text

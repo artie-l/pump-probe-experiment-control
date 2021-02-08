@@ -44,7 +44,7 @@ This file is used to combine 3 core modules together: GUI elements, GUI logic an
 If one wants to add a new element to the GUI, it should be initialized within the `gui_assembled.py`, to appear in the program.
 
 ## GUI elements category
-This category contains the files that construct the GUI. If one wants to add some new functionality, one can take the one of following files as an example. 
+This category contains the files that construct the GUI. If one wants to add some new functionality, one can take the one of following files as an example. If the following files are modified, the changes should be automatically included in the `gui_assembled.py`. Specific functionality (as new Graph space) might require gui assembled.py modification.
 ### gui scan params.py
 This file creates the `Scan Parameters` section in the GUI. User should input the values that will define the time-resolved scan-window, temporal resolution and the number of scans. 
 This file initializes a `Frame` that contains the `LabelFrame` with:
@@ -79,7 +79,7 @@ This file initializes a `Frame` that contains two `LabelFrame`'s with:
    * `FFT` frame, to display the FFT of the data displayed in `Channel X` figure.
 
 If one wants more plots, it is possible to follow the code. One can:
-1. Create a figure in the `main.py`
+1. Create a figure in the `gui_assembled.py` (should be done before creating the graph_space).
 2. Add an aditional frame.
 3. Add it to an existing notebook `graph_space_Y_FFT_Notebook`.
 4. Create a new canvas and draw a figure created in the Step 1, on the Frame created in the step 2
@@ -87,9 +87,19 @@ If one wants more plots, it is possible to follow the code. One can:
 6. Draw a figure
 
 ### gui lia controls.py
-text
+This file creates the `LIA parameters` section in the GUI. It is used to change the sensitivity and time constant of the LIA. 
+The file initializes a `Frame`, that contains one `LabelFrame` with:
+1. Two labels.
+2. Two comboboxes with Sensitivity and Time Constant values.
+3. `change_tconst` function, that changes the time constant of the LIA when specific value is chosen.
+3. `change_sens` function, that changes the sensitivity of the LIA when specific value is chosen.
+
+This file imports the `LIATconstVisual` and `LIASensVisual` values from the `gui_variables.py`, in order to display them in the combobox. Normally, the LIA takes the values from 0 to n for the time constant and sensitivity. The indexes of a value in `LIATconstVisual` and `LIASensVisual` correspond to the value that one should send to LIA to set the respective time constant or sensitivity.
+
+One can add more options in analogy with the code presented here.
 ### gui chopper controls.py
-text
+This file creates the `LIA parameters` section in the GUI. It is used to change the sensitivity and time constant of the LIA. 
+The file initializes a `Frame`, that contains one `LabelFrame` with:
 ### gui delay line controls.py
 text
 ### gui scan controls.py

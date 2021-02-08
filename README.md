@@ -22,7 +22,7 @@ It was made with an intent of user-friendly software configuration, hardware ini
 
 # Features
 
-1. **Easy control over the scan parameters**, as:
+1. **Easy control over the scan parameters**:
    * Initial and final positions
    * Time step
    * Number of scans, for averaging

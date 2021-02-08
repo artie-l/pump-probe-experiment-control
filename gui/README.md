@@ -63,14 +63,16 @@ It initializes a `Frame` that contains the `LabelFrame` with:
 
 The `Choose folder` button has an image linked to it, that is located in the `program_dir/misc` folder.
 ### gui rt lia.py
-This file defines the **`RealTimeLIAValues` class** that creates `LIA Output, R` section in the GUI. It is used to display the live valuer of LIA's R channel with a specific delay. This LIA polling will automatically stop when the new scan is started. While the scan in process, the `Start` button remains uncative. During Quick Scan, `Start` button can be used, since no data is transfered from the LIA.
+This file defines the **`RealTimeLIAValues` class** that creates `LIA Output, R` section in the GUI. It is used to display the live reading of LIA's R channel with a specific delay. 
+
 This file initializes a `Frame` that contains the `LabelFrame` with:
 1. Figure to display a Graph.
 2. Button to Start/Stop live LIA reading.
 3. `on_off` function, that deals with Button logic.
 4. `trace` function, to plot the curve.
+    * `trace` function is called in the `main.py`, within `update` function. 
 
-`trace` function is called in the `main.py`, within `update` function.
+The LIA polling will automatically stop when the new scan is started. While the scan in process, the `Start` button will remain uncative. During Quick Scan, `Start` button can be used, since no data is transfered from the LIA.
 ### gui data graphs.py
 This file defines the **`DataGraphs` class** that creates `Channel X` and `Complementary Info` sections in the GUI. It is used to display graphs after each scan made during data acqusition. `Channel X` section equiped with an interactive toolbar, that allows the closer inspection of the `Channel X` plot. `Complementary Info` has two tabs, `Channel Y` and `FFT`. `Channel Y` records the data from Y channel of the LIA, while `FFT` does the Fast Fourier Transform of the **average** signal displayed in the `Channel X`.
 
@@ -121,9 +123,25 @@ This file imports the `ChopperFrequency` and `LIAChopperOutpValues` values from 
     
 Now, when you launch a programm, `Chopper Frequency` label frame should appear in the GUI window. Upon chosing the value from the combobox, chopper frequency will be set to the desired value.
 ### gui delay line controls.py
-This file defines the **`DelayLineControls` class** that creates `Delay Stage Control` section in the GUI. It is used to move the delay stage to the specific position, or change its speed. The `Min` and `Max` buttons are disabled utill the first scan is completed.
+This file defines the **`DelayLineControls` class** that creates `Delay Stage Control` section in the GUI. It is used to select one of the delay lines as *primary* (to be used for the measurement), move *primary* stage to the specific position, or change its speed. The `Min` and `Max` buttons are disabled utill the first scan is completed.
 
 It initializes a `Frame`, which contains one `LabelFrame` with:
+1. 2 Entries
+2. 4 Buttons
+3. 1 Label
+4. 1 Combobox
+5. `move_to_Max` function:
+    * Will move the *primary* delay line to the position for which the maximum value of the signal was recorded
+6. `move_to_Min` function:
+    * Will move the *primary* delay line to the position for which the minimum value of the signal was recorded
+7. `move_to_Pos` function:
+    * Will move the *primary* delay line to the specific time-delay, that was typed in the adjustent Entry
+8. `set_Velocity` function:
+    * Will set the velocity of the *primary* delay line to the value typed in the in the adjustent Entry
+9. `change_delay_line` function:
+    * Will set the selected delay line to be *primary*. 
+    
+It is possible to add multiple delay lines in the program. Sophisticated measurement functions can be written to operate with all of them simultaneously.
 ### gui scan controls.py
 text
 ## GUI logic category

@@ -57,7 +57,9 @@ It was made with an intent of user-friendly software configuration, hardware ini
     * The programm will save all the values (Scan folder, File name, Scan parameters, LIA sensitivity and time constant)
     * Upon the Initialization of the programm, all values will be restored and automatically filled in the respective entries.
 13. **Take a screenshot**:
-    * Save a printscreen, to compare the scan parameters in future.
+    * Save the printscreen, to capture the values of all input parameters.
+14. **Multiple Delay Line support**:
+    * Select or change the stage to be used for the next measurement.
 14. **Chopper frequency control** (disabled by the default):
     * Set a mechanical chopper, connected to LIA, to modulate the signal at a specific frequency (see [supplementary infromation](https://github.com/artie-l/pump-probe-experiment-control/blob/master/gui/README.md#gui-chopper-controlspy)).
 

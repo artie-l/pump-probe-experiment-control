@@ -53,12 +53,39 @@ This file initializes a `Frame` that contains the `LabelFrame` with:
 ###  gui filepath entries.py
 This file creates the `Path and File name` section in the GUI. Here, one can set the folder to save the files to and file name. As well, it will display the current number of scan, that will be appended at the end of the filename. 
 This file initializes a `Frame` that contains the `LabelFrame` with:
-1. Labels to entries.
-2. Entries to input the scan parameters.
+1. Lables to entries.
+2. Entries to input the filename and path.
+3. Button to choose the folder to save files to.
+4. Label with the `scan_number_Var` linked to it. 
+5. `get_folder_path` function, to save the path to save the data to.
+
+The `Choose folder` button has an image linked to it, that is located in the `program_dir/misc` folder.
 ### gui rt lia.py
-text
+This file creates the `LIA Output, R` section in the GUI. It is used to display the live valuer of LIA's R channel with a specific delay. This LIA polling will automatically stop when the new scan is started. While the scan in process, the `Start` button remains uncative. During Quick Scan, `Start` button can be used, since no data is transfered from the LIA.
+This file initializes a `Frame` that contains the `LabelFrame` with:
+1. Figure to display a Graph.
+2. Button to Start/Stop live LIA reading.
+3. `on_off` function, that deals with Button logic.
+4. `trace` function, to plot the curve.
+
+`trace` function is called in the `main.py`, within `update` function.
 ### gui data graphs.py
-text
+This file creates the `Channel X` and `Complementary Info` sections in the GUI. It is used to display graphs after each scan made during data acqusition. `Channel X` section equiped with an interactive toolbar, that allows the closer inspection of the `Channel X` plot. `Complementary Info` has two tabs, `Channel Y` and `FFT`. `Channel Y` records the data from Y channel of the LIA, while `FFT` does the Fast Fourier Transform of the **average** signal displayed in the `Channel X`.
+This file initializes a `Frame` that contains two `LabelFrame`'s with:
+1. Frame to display the LIA's data from `Channel X`.
+2. Interactive toolbar for the `Channel X` figure.
+3. Frame with a Notebook that contains:
+   * `Channel Y` frame, to display the LIA's data from `Channel Y`
+   * `FFT` frame, to display the FFT of the data displayed in `Channel X` figure.
+
+If one wants more plots, it is possible to follow the code. One can:
+1. Create a figure in the `main.py`
+2. Add an aditional frame.
+3. Add it to an existing notebook `graph_space_Y_FFT_Notebook`.
+4. Create a new canvas and draw a figure created in the Step 1, on the Frame created in the step 2
+5. Place canvas on the grid
+6. Draw a figure
+
 ### gui lia controls.py
 text
 ### gui chopper controls.py

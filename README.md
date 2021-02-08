@@ -66,7 +66,7 @@ It was made with an intent of user-friendly software configuration, hardware ini
 
 # Requirements
 
-One can copy-paste `pip` commands to install the nesessary packages. 
+One can use the following `pip` commands to install the nesessary packages. 
 
 Python 2.7 version is required due to compatibility with original XPS Motion controller driver.
 

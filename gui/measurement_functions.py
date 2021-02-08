@@ -5,9 +5,6 @@ import time
 from pyautogui import press
 from PIL import ImageGrab
 
-press('printscreen')
-ImageGrab.grabclipboard().save('somefile.png','PNG')
-
 
 def convtomm(var):
     try:
@@ -184,7 +181,7 @@ def x_y_normal_scan(GUI):
 
     # saving up the screenshot of the GUI
     press('printscreen')
-    ImageGrab.grabclipboard().save(folder + theday + '_' + filename + '_screenshot_' + str(daily_scan_number),'PNG')
+    ImageGrab.grabclipboard().save(folder + theday + '_' + filename + '_screenshot_' + str(daily_scan_number) + '.png','PNG')
 
 
 # Fast scan, used for alignment. No data will be taken

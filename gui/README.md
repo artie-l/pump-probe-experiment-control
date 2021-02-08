@@ -186,7 +186,7 @@ It initializes a `Frame` which contains one `LabelFrame` with:
         + Enable the buttons that were disabled in 4. with `controls_off` function ([->](#gui-logicpy) `gui_logic.py`).
         + Enable the the red cross in top righ corner of GUI.
 6. `quick_scan` function will `check_scan_direction`, and if it is correct:
-    * Disable the buttons that will interfere with the measurement with `controls_on` function ([link](#gui-logicpy) `gui_logic.py`).
+    * Disable the buttons that will interfere with the measurement with `controls_on` function ([->](#gui-logicpy) `gui_logic.py`).
     * Create an empty `Queue`. 
     * Initialize the **`QuickScanThread` class** that will run `fast_scan` function in the background ([->](measurement-functionspy) 'measurement_functions.py').
     * Schedule to run `quickscan_queue` function after 100 ms.

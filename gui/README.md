@@ -79,7 +79,7 @@ This file initializes a `Frame` that contains two `LabelFrame`'s with:
    * `FFT` frame, to display the FFT of the data displayed in `Channel X` figure.
 
 If one wants more plots, it is possible to follow the code. One can:
-1. Create a figure in the `gui_assembled.py` (should be done before creating the graph_space).
+1. Create a figure in the `gui_assembled.py` (should be done before initializing the `self.graph_space`).
 2. Add an aditional frame.
 3. Add it to an existing notebook `graph_space_Y_FFT_Notebook`.
 4. Create a new canvas and draw a figure created in the Step 1, on the Frame created in the step 2

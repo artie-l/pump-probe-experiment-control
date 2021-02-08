@@ -47,12 +47,14 @@ If one wants to add a new element to the GUI, it should be initialized within th
 This category contains the files that construct the GUI. If one wants to add some new functionality, one can take the one of following files as an example. If the following files are modified, the changes should be automatically included in the `gui_assembled.py`. Specific functionality (as new Graph space) might require gui assembled.py modification.
 ### gui scan params.py
 This file defines the **`ScanParameters` class** that creates `Scan Parameters` section in the GUI. User should input the values that will define the time-resolved scan-window, temporal resolution and the number of scans. 
-This file initializes a `Frame` that contains the `LabelFrame` with:
+
+It initializes a `Frame` that contains the `LabelFrame` with:
 1. Labels to entries.
 2. Entries to input the scan parameters.
 ###  gui filepath entries.py
 This file defines the **`FilePathNameEntries` class** that creates `Path and File name` section in the GUI. Here, one can set the folder to save the files to and file name. As well, it will display the current number of scan, that will be appended at the end of the filename. 
-This file initializes a `Frame` that contains the `LabelFrame` with:
+
+It initializes a `Frame` that contains the `LabelFrame` with:
 1. Lables to entries.
 2. Entries to input the filename and path.
 3. Button to choose the folder to save files to.
@@ -71,7 +73,8 @@ This file initializes a `Frame` that contains the `LabelFrame` with:
 `trace` function is called in the `main.py`, within `update` function.
 ### gui data graphs.py
 This file defines the **`DataGraphs` class** that creates `Channel X` and `Complementary Info` sections in the GUI. It is used to display graphs after each scan made during data acqusition. `Channel X` section equiped with an interactive toolbar, that allows the closer inspection of the `Channel X` plot. `Complementary Info` has two tabs, `Channel Y` and `FFT`. `Channel Y` records the data from Y channel of the LIA, while `FFT` does the Fast Fourier Transform of the **average** signal displayed in the `Channel X`.
-This file initializes a `Frame` that contains two `LabelFrame`'s with:
+
+It initializes a `Frame` that contains two `LabelFrame`'s with:
 1. Frame to display the LIA's data from `Channel X`.
 2. Interactive toolbar for the `Channel X` figure.
 3. Frame with a Notebook that contains:
@@ -87,8 +90,9 @@ If one wants more plots, it is possible to follow the code. One can:
 6. Draw a figure
 
 ### gui lia controls.py
-This file defines the **`LIAControls` class** that creates `LIA parameters` section in the GUI. It is used to change the sensitivity and time constant of the LIA. 
-The file initializes a `Frame`, that contains one `LabelFrame` with:
+This file defines the **`LIAControls` class** that creates `LIA parameters` section in the GUI. It is used to change the sensitivity and time constant of the LIA.
+
+It initializes a `Frame`, that contains one `LabelFrame` with:
 1. Two labels.
 2. Two comboboxes with Sensitivity and Time Constant values.
 3. `change_tconst` function, that changes the time constant of the LIA when specific value is chosen.
@@ -99,7 +103,8 @@ This file imports the `LIATconstVisual` and `LIASensVisual` values from the `gui
 One can add more options in analogy with the code presented here.
 ### gui chopper controls.py
 This file defines the **`LIAControls` class** that creates `Chopper Frequency` section in the GUI. It is disabled by the default. If you have the Chopper that can be controlled with one of the LIA's outputs.
-The file initializes a `Frame`, which contains one `LabelFrame` with:
+
+It initializes a `Frame`, which contains one `LabelFrame` with:
 1. Label.
 2. Combobox with specific frequency values.
 3. `change_frequency` function, that sets the Voltage of LIA's AUX output 2 to the value that corresponds to the frequency selected.
@@ -118,7 +123,7 @@ Now, when you launch a programm, `Chopper Frequency` label frame should appear i
 ### gui delay line controls.py
 This file defines the **`DelayLineControls` class** that creates `Delay Stage Control` section in the GUI. It is used to move the delay stage to the specific position, or change its speed. The `Min` and `Max` buttons are disabled utill the first scan is completed.
 
-The file initializes a `Frame`, which contains one `LabelFrame` with:
+It initializes a `Frame`, which contains one `LabelFrame` with:
 ### gui scan controls.py
 text
 ## GUI logic category

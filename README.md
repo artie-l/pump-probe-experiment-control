@@ -45,17 +45,17 @@ It was made with an intent of user-friendly software configuration, hardware ini
    * Can work with Real-time LIA display.
    * It will move the delay line within the defined time-frames (Scan Parameters), so one easilly optimize the amplitude of the signal
 10. **Graphs, that are updated after each scan**:
-   * Data recorded from X channel, plotted in function of Time delay and Delay Line position.
-   * Interactive toolbar for the X channel plot.
-   * Data recorded from Y channel, plotted in function of Time delay and Delay Line position.
-   * FFT of Data recorded from X channel, plotted in function Frequency (THz).
+    * Data recorded from X channel, plotted in function of Time delay and Delay Line position.
+    * Interactive toolbar for the X channel plot.
+    * Data recorded from Y channel, plotted in function of Time delay and Delay Line position.
+    * FFT of Data recorded from X channel, plotted in function Frequency (THz).
 11. **Save the Graphs and data**:
-   * Create the All scans file, that will be updated after each scan made (LIA readings in Volts vs Time delay)
-   * Save the X and Y channel plot(Average + last scan on the same plot), after acqusition is terminated or stopped.
-   * Save the Mean scans fille (average of X or Y channel data) (LIA readings in Volts vs Time delay).
+    * Create the All scans file, that will be updated after each scan made (LIA readings in Volts vs Time delay)
+    * Save the X and Y channel plot(Average + last scan on the same plot), after acqusition is terminated or stopped.
+    * Save the Mean scans fille (average of X or Y channel data) (LIA readings in Volts vs Time delay).
 12. **Auto save and recall the parameters**:
-   * The programm will save all the values (Scan folder, File name, Scan parameters, LIA sensitivity and time constant)
-   * Upon the Initialization of the programm, all values will be restored and automatically filled in the respective entries.
+    * The programm will save all the values (Scan folder, File name, Scan parameters, LIA sensitivity and time constant)
+    * Upon the Initialization of the programm, all values will be restored and automatically filled in the respective entries.
 
 ## Requirements
 

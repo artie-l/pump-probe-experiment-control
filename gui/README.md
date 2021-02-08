@@ -166,36 +166,36 @@ It initializes a `Frame` which contains one `LabelFrame` with:
     * `end_scan_var` to estimate the time it will take to complete the data acquisition
 3. 3 Labels
 4. `start_scan` function will `check_scan_direction`, and if it is correct:
-    * Disable the buttons that will interfere with the measurement with `controls_off` function (imported from `gui_logic.py` [-](#gui-logicpy)).
+    * Disable the buttons that will interfere with the measurement with `controls_off` function (imported from `gui_logic.py` [->](#gui-logicpy)).
     * Create an empty `Queue`. 
-    * Initialize the **`MeasurementThread` class** that will run `x_y_normal_scan` function in the background (imported from 'measurement_functions.py' [-](measurement-functionspy)).
+    * Initialize the **`MeasurementThread` class** that will run `x_y_normal_scan` function in the background (imported from 'measurement_functions.py' [->](measurement-functionspy)).
     * Schedule to run `measurement_queue` function after 100 ms.
     * Disable the red cross in top righ corner of GUI.
 5. `measurement_queue` function:
     * Check if the `Queue` is empty. 
       * If yes, it will schedule to run itself after 100 ms.
       * If `Queue` is not empty anymore, it will:
-        + Save all inputs in the file by executing `save_settings` function (imported from `gui_logic.py` [-](#gui-logicpy))
-        + Enable the buttons that were disabled in 4. with `controls_off` function (imported from `gui_logic.py` [-](#gui-logicpy)).
+        + Save all inputs in the file by executing `save_settings` function (imported from `gui_logic.py` [->](#gui-logicpy))
+        + Enable the buttons that were disabled in 4. with `controls_off` function (imported from `gui_logic.py` [->](#gui-logicpy)).
         + Enable the the red cross in top righ corner of GUI.
 6. `quick_scan` function will `check_scan_direction`, and if it is correct:
     * Disable the buttons that will interfere with the measurement with `controls_on` function (imported from `gui_logic.py`[link](#gui-logicpy)).
     * Create an empty `Queue`. 
-    * Initialize the **`QuickScanThread` class** that will run `fast_scan` function in the background (imported from 'measurement_functions.py' [-](measurement-functionspy)).
+    * Initialize the **`QuickScanThread` class** that will run `fast_scan` function in the background (imported from 'measurement_functions.py' [->](measurement-functionspy)).
     * Schedule to run `quickscan_queue` function after 100 ms.
     * Disable the the red cross in top righ corner of GUI.
 7. `quickscan_queue` function:
     * Check if the `Queue` is empty. 
       * If yes, it will schedule to run itself after 100 ms.
       * If `Queue` is not empty anymore, it will:
-        + Enable the buttons that were disabled in 4. with `controls_on` function (imported from `gui_logic.py` [-](#gui-logicpy)).
+        + Enable the buttons that were disabled in 4. with `controls_on` function (imported from `gui_logic.py` [->](#gui-logicpy)).
         + Enable the the red cross in top righ corner of GUI.
 8.`stop_scan` function:
     * Will change the state of the `Stop` and `Pause` button after `Stop` button was pressed.
 9. `pause_scan` function:
     * Will change the state of the `Pause` button after `Pause` button was pressed.
     
-This is probably the most compicated part of the GUI. This file has imports from the `measurement_functions.py` ([-](measurement-functionspy)) and `gui_logic.py` ([-](#gui-logicpy)). To sum up, `gui_scan_controls.py`:
+This is probably the most compicated part of the GUI. This file has imports from the `measurement_functions.py` ([->](measurement-functionspy)) and `gui_logic.py` ([->](#gui-logicpy)). To sum up, `gui_scan_controls.py`:
 1. Is responsible for calling specific functions that are the *logic* of the GUI (**example:** *turn off buttons during the scan*).
 2. Launches the measurement in the background with automated checks of its completion.
 3. Checks for the validity of the input parameters.

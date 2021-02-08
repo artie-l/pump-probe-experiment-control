@@ -18,7 +18,7 @@ LIASensVisual = ("2 nV", "5 nV", "10 nV", "20 nV", "50 nV", "100 nV", "200 nV",
                  )
 sensliaoutp = array([0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,
                      18,19,20,21,22,23,24,25,26]
-)
+                   )
 
 ChopperFrequencyPreset = ('Off', '5 kHz', '10 kHz', '15 kHz', '20 kHz', 
                           '25 kHz', '30  kHz', '35 kHz', '40 kHz', '45 kHz',

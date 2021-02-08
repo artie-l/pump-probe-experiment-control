@@ -8,6 +8,7 @@
   * [Delay line setup](#delay-line-setup)
 - [How to launch the software](#how-to-launch-the-software)
 - [What to be changed in the future](#what-to-be-changed-in-the-future)
+- [Supplementary information and Troubleshooting](#supplementary-information-and-troubleshooting)
 # 
 
 Pump-probe experiment control is the graphical user interface (GUI) that designed to simplify, automatize, and visualize the data acquisition process.
@@ -178,3 +179,18 @@ Since I am at the last year of my PhD, there is almost no time prioritize the fo
    * The good candidate is here: https://github.com/pyepics/newportxps. It should require only the modification of `tools_initialization.py` file.
 2. First-launch setup window, to configure the LIA and DelayLines, in order not to mess with the .py files.
 3. The Windows/Linux installer.
+
+# Supplementary information and Troubleshooting
+This section should be reffered to if one has some problems with the software, wants to add/modify some GUI elements. 
+The following questions:
+1. How to make it work with different LIA? ;
+2. What is the measurement routine? ;
+3. What this button does? ;
+4. Where I can find this element of the GUI?;
+5. Etc.,
+or their derivatieves should be answered in the guide, or somewhat detailed explanation. It be displayed by navigationg to `gui` folder at the top of this page (or by following this link: https://github.com/artie-l/pump-probe-experiment-control/blob/master/gui/README.md).
+
+If you have any questions or suggestions, do not hesitate to contact me. 
+
+
+

@@ -2,6 +2,11 @@ import numpy as np
 from gui_variables import tconstliaoutp, tconstuseroutp
 import datetime
 import time
+from pyautogui import press
+from PIL import ImageGrab
+
+press('printscreen')
+ImageGrab.grabclipboard().save('somefile.png','PNG')
 
 
 def convtomm(var):
@@ -176,6 +181,10 @@ def x_y_normal_scan(GUI):
     max_pos_index = np.argmax(xmeandata)
 
     return delay[min_pos_index], delay[max_pos_index]
+
+    # saving up the screenshot of the GUI
+    press('printscreen')
+    ImageGrab.grabclipboard().save(folder + theday + '_' + filename + '_screenshot_' + str(daily_scan_number),'PNG')
 
 
 # Fast scan, used for alignment. No data will be taken

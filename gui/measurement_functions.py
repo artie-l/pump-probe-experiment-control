@@ -166,6 +166,12 @@ def x_y_normal_scan(GUI):
     GUI.scan_controls.current_scan_Var.set('')
     GUI.current_scan_PB['value'] = 0
     GUI.scan_PB['value'] = 0
+    
+    # saving up the screenshot of the GUI
+    GUI.parent.attributes("-topmost", True)
+    GUI.parent.after_idle(root.attributes,'-topmost',False)
+    press('printscreen')
+    ImageGrab.grabclipboard().save(folder + theday + '_' + filename + '_screenshot_' + str(daily_scan_number) + '.png','PNG')
 
     # appending scan number
 
@@ -178,12 +184,6 @@ def x_y_normal_scan(GUI):
     max_pos_index = np.argmax(xmeandata)
 
     return delay[min_pos_index], delay[max_pos_index]
-
-    # saving up the screenshot of the GUI
-    GUI.parent.attributes("-topmost", True)
-    GUI.parent.after_idle(root.attributes,'-topmost',False)
-    press('printscreen')
-    ImageGrab.grabclipboard().save(folder + theday + '_' + filename + '_screenshot_' + str(daily_scan_number) + '.png','PNG')
 
 
 # Fast scan, used for alignment. No data will be taken

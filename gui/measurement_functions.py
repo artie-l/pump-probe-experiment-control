@@ -180,6 +180,8 @@ def x_y_normal_scan(GUI):
     return delay[min_pos_index], delay[max_pos_index]
 
     # saving up the screenshot of the GUI
+    GUI.parent.attributes("-topmost", True)
+    GUI.parent.after_idle(root.attributes,'-topmost',False)
     press('printscreen')
     ImageGrab.grabclipboard().save(folder + theday + '_' + filename + '_screenshot_' + str(daily_scan_number) + '.png','PNG')
 

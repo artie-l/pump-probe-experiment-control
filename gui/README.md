@@ -146,7 +146,61 @@ This file has two imports: `measurement_functions.py` and `gui_variables.py`:
 2. `DelayLines` constant is imported from `gui_variables.py`. It contains the names of the delay lines one wants to use in this programm.
 It is possible to add multiple delay lines in the program. Sophisticated measurement functions can be written to operate with all of them simultaneously, see [measurement_functions.py](#measurement-functionspy).
 ### gui scan controls.py
-text
+This file has the following **classes** and *functions*:
+1. `disable_event` function. It is used to prevent accidental collapse of GUI by hitting the red cross in top righ corner, while data acquisition is in the progress.
+2. `check_scan_direction` function will check if the input *Scan parameters* are correct.
+3. **`QuickScanThread`** and **`MeasurementThread` classes** are the [thread](https://www.tutorialspoint.com/python/python_multithreading.htm) classes that prevent the programm from *hanging* or *lagging* during the measurement process.
+    * **`MeasurementThread` class**, when initialized, will execute a `x_y_normal_scan` funtion from `measurement_functions.py` ([link](#measurement-functionspy))
+        * Upon completion, `x_y_normal_scan` function will return the postion of delay stage for the measured signal's minimun and maximum values.
+        * Upon completion, this class will put an item to the `Queue`, passed in its argument.
+    * **`QuickScanThread` class**, when initialized, will execute a `fast_scan` funtion from `measurement_functions.py` ([link](#measurement-functionspy))
+        * Upon completion, this class will put an item to the `Queue`, passed in its argument.
+4. **`ScanControls` class**, which is described below.
+
+This file defines the **`ScanControls` class** that creates `Scan Initialisation` section in the GUI. It is used to launch, pause or stop the scan. 
+
+It initializes a `Frame` which contains one `LabelFrame` with:
+1. 4 buttons: Start, Stop, Pause and Quick Scan.
+2. 2 variables of `tk.StringVars()`:
+    * `current_scan_Var` to display the current scan number
+    * `end_scan_var` to estimate the time it will take to complete the data acquisition
+3. 3 Labels
+4. `start_scan` function will `check_scan_direction`, and if it is correct:
+    * Disable the buttons that will interfere with the measurement with `controls_off` function (imported from `gui_logic.py`[link](#gui-logicpy)).
+    * Create an empty `Queue`. 
+    * Initialize the **`MeasurementThread` class** that will run `x_y_normal_scan` function in the background (imported from 'measurement_functions.py'[link](measurement-functionspy)).
+    * Schedule to run `measurement_queue` function after 100 ms.
+    * Disable the red cross in top righ corner of GUI.
+5. `measurement_queue` function:
+    * Check if the `Queue` is empty. 
+      * If yes, it will schedule to run itself after 100 ms.
+      * If `Queue` is not empty anymore, it will:
+        + Save all inputs in the file by executing `save_settings` function (imported from `gui_logic.py`[link](#gui-logicpy))
+        + Enable the buttons that were disabled in 4. with `controls_off` function (imported from `gui_logic.py`[link](#gui-logicpy)).
+        + Enable the the red cross in top righ corner of GUI.
+6. `quick_scan` function will `check_scan_direction`, and if it is correct:
+    * Disable the buttons that will interfere with the measurement with `controls_on` function (imported from `gui_logic.py`[link](#gui-logicpy)).
+    * Create an empty `Queue`. 
+    * Initialize the **`QuickScanThread` class** that will run `fast_scan` function in the background (imported from 'measurement_functions.py'[link](measurement-functionspy)).
+    * Schedule to run `quickscan_queue` function after 100 ms.
+    * Disable the the red cross in top righ corner of GUI.
+7. `quickscan_queue` function:
+    * Check if the `Queue` is empty. 
+      * If yes, it will schedule to run itself after 100 ms.
+      * If `Queue` is not empty anymore, it will:
+        + Enable the buttons that were disabled in 4. with `controls_on` function (imported from `gui_logic.py`[link](#gui-logicpy)).
+        + Enable the the red cross in top righ corner of GUI.
+8.`stop_scan` function:
+    * Will change the state of the `Stop` and `Pause` button after `Stop` button was pressed.
+9. `pause_scan` function:
+    * Will change the state of the `Pause` button after `Pause` button was pressed.
+    
+This is probably the most compicated part of the GUI. This file has imports from the `measurement_functions.py` ([link](measurement-functionspy)) and `gui_logic.py` ([link](#gui-logicpy)). To sum up, `gui_scan_controls.py`:
+1. Is responsible for calling specific functions that are the *logic* of the GUI (**example:** *turn off buttons during the scan*).
+2. Launches the measurement in the background with automated checks of its completion.
+3. Checks for the validity of the input parameters.
+
+The most compicated parts are the **Start**, **Quick Scan** buttons, because of `Queue`'s and **`Threading`** classes that are called and initialized within. It might be hard to keep the track of it at first, but when understood, one can easilly create sophisticated measurement routines.
 ## GUI logic category
 text
 ### gui logic.py

@@ -29,30 +29,32 @@
 # Program structure
 Here is the quick description of each file that the program is built of. It can be used as the reference for further modification or upgrade. Programm visual structure is shown in the figure above.
 ## main.py
-`main.py` should be used to launch the program. It compiles the GUI, and is responsible for the the real-time LIA reading, in the `LIA Output,R` via the function `update`. 
+`main.py` should be used to launch the program. It renders the full GUI, and is responsible for the the real-time LIA reading, within the `LIA Output,R` `LabelFrame` via the function `update`. 
 
-If one wants to launch the program without opening an IDE, one should run the `main.py` via command prompt as `python main.py`.  Note, that command promt should be set to the directory where `main.py` is located. To do this, one can use the `Manip Control.cmd` which is included in the repo.
+If one wants to launch the program without opening an IDE, one should run the `main.py` via command prompt as `python main.py`.  Note, that command prompt should be set to the directory where `main.py` is located. To do this, one can use the `Manip Control.cmd` which is included in the repo.
 # gui Folder
 All the following files are located in the `program_dir/gui`. The location of those should remain unchanged for the programm to function. Do not create the files in the `root` python or Spyder directory, as it might cause interference. 
 ## gui assembled.py
-This file is used to combine 3 core modules together: GUI elements, GUI logic and Hardware. What it does:
-1. It creates the programm window and adds all the components
-2. It creates the Figures and toolbar through matplotlib. 
-3. It has some specific elements like Proggressbars and Initialize button elements. 
+This file is used to combine 3 core modules: GUI elements, GUI logic and Hardware. What it does:
+1. Creates the programm window and adds all the components
+2. Creates the Figures and toolbar through matplotlib. 
+3. Renders Proggressbars and Initialize/Stop button. 
 4. When the initialize button is pressed, it will check the connection to the instruments (LIA and Delay Lines), and will give the respective error is the connection can not be establised.
 
 If one wants to add a new element to the GUI, it should be initialized within the `gui_assembled.py`, to appear in the program.
 
 ## GUI elements category
 This category contains the files that construct the GUI. If one wants to add some new functionality, one can take the one of following files as an example. If the following files are modified, the changes should be automatically included in the `gui_assembled.py`. Specific functionality (as new Graph space) might require gui assembled.py modification.
+
 ### gui scan params.py
-This file defines the **`ScanParameters` class** that creates `Scan Parameters` section in the GUI. User should input the values that will define the time-resolved scan-window, temporal resolution and the number of scans. 
+This file defines the **`ScanParameters` class** that renders `Scan Parameters` section in the GUI. User should input the values that will define the time-resolved scan-window, temporal resolution and the number of scans. 
 
 It initializes a `Frame` that contains the `LabelFrame` with:
 1. Labels to entries.
 2. Entries to input the scan parameters.
+
 ###  gui filepath entries.py
-This file defines the **`FilePathNameEntries` class** that creates `Path and File name` section in the GUI. Here, one can set the folder to save the files to and file name. As well, it will display the current number of scan, that will be appended at the end of the filename. 
+This file defines the **`FilePathNameEntries` class** that renders `Path and File name` section in the GUI. Here, one can set the folder to save the files to and file name. As well, it will display the current number of scan, that will be appended at the end of the filename. 
 
 It initializes a `Frame` that contains the `LabelFrame` with:
 1. Lables to entries.
@@ -62,8 +64,9 @@ It initializes a `Frame` that contains the `LabelFrame` with:
 5. `get_folder_path` function, to save the path to save the data to.
 
 The `Choose folder` button has an image linked to it, that is located in the `program_dir/misc` folder.
+
 ### gui rt lia.py
-This file defines the **`RealTimeLIAValues` class** that creates `LIA Output, R` section in the GUI. It is used to display the live reading of LIA's R channel with a specific delay. 
+This file defines the **`RealTimeLIAValues` class** that renders `LIA Output, R` section in the GUI. It is used to display the live reading of LIA's R channel with a specific delay. 
 
 This file initializes a `Frame` that contains the `LabelFrame` with:
 1. Figure to display a Graph.
@@ -73,8 +76,9 @@ This file initializes a `Frame` that contains the `LabelFrame` with:
     * `trace` function is called in the `main.py`, within `update` function. 
 
 The LIA polling will automatically stop when the new scan is started. While the scan in process, the `Start` button will remain uncative. During Quick Scan, `Start` button can be used, since no data is transfered from the LIA.
+
 ### gui data graphs.py
-This file defines the **`DataGraphs` class** that creates `Channel X` and `Complementary Info` sections in the GUI. It is used to display graphs after each scan made during data acqusition. `Channel X` section equiped with an interactive toolbar, that allows the closer inspection of the `Channel X` plot. `Complementary Info` has two tabs, `Channel Y` and `FFT`. `Channel Y` records the data from Y channel of the LIA, while `FFT` does the Fast Fourier Transform of the **average** signal displayed in the `Channel X`.
+This file defines the **`DataGraphs` class** that renders `Channel X` and `Complementary Info` sections in the GUI. It is used to display graphs after each scan made during data acqusition. `Channel X` section equiped with an interactive toolbar, that allows the closer inspection of the `Channel X` plot. `Complementary Info` has two tabs, `Channel Y` and `FFT`. `Channel Y` records the data from Y channel of the LIA, while `FFT` does the Fast Fourier Transform of the **average** signal displayed in the `Channel X`.
 
 It initializes a `Frame` that contains two `LabelFrame`'s with:
 1. Frame to display the LIA's data from `Channel X`.
@@ -92,7 +96,7 @@ If one wants more plots, it is possible to follow the code. One can:
 6. Draw a figure
 
 ### gui lia controls.py
-This file defines the **`LIAControls` class** that creates `LIA parameters` section in the GUI. It is used to change the sensitivity and time constant of the LIA.
+This file defines the **`LIAControls` class** that renders `LIA parameters` section in the GUI. It is used to change the sensitivity and time constant of the LIA.
 
 It initializes a `Frame`, that contains one `LabelFrame` with:
 1. Two labels.
@@ -103,8 +107,9 @@ It initializes a `Frame`, that contains one `LabelFrame` with:
 This file imports the `LIATconstVisual` and `LIASensVisual` values from the `gui_variables.py`([link](#gui-variablespy)), in order to display them in the combobox. Normally, the LIA takes the values from 0 to n for the time constant and sensitivity. The indexes of a value in `LIATconstVisual` and `LIASensVisual` correspond to the value that one should send to LIA to set the respective time constant or sensitivity.
 
 One can add more options in analogy with the code presented here.
+
 ### gui chopper controls.py
-This file defines the **`LIAControls` class** that creates `Chopper Frequency` section in the GUI. It is disabled by the default. If you have the Chopper that can be controlled with one of the LIA's outputs.
+This file defines the **`LIAControls` class** that renders `Chopper Frequency` section in the GUI. It is disabled by the default. If you have the Chopper that can be controlled with one of the LIA's outputs.
 
 It initializes a `Frame`, which contains one `LabelFrame` with:
 1. Label.
@@ -122,8 +127,9 @@ This file imports the `ChopperFrequency` and `LIAChopperOutpValues` values from 
     * Uncomment lines 68 and 97.
     
 Now, when you launch a programm, `Chopper Frequency` label frame should appear in the GUI window. Upon chosing the value from the combobox, chopper frequency will be set to the desired value.
+
 ### gui delay line controls.py
-This file defines the **`DelayLineControls` class** that creates `Delay Stage Control` section in the GUI. It is used to select one of the delay lines as *primary* (to be used for the measurement), move *primary* stage to the specific position, or change its speed. The `Min` and `Max` buttons are disabled utill the first scan is completed.
+This file defines the **`DelayLineControls` class** that renders `Delay Stage Control` section in the GUI. It is used to select one of the delay lines as *primary* (to be used for the measurement), move *primary* stage to the specific position, or change its speed. The `Min` and `Max` buttons are disabled utill the first scan is completed.
 
 It initializes a `Frame`, which contains one `LabelFrame` with:
 1. 2 Entries
@@ -145,10 +151,11 @@ This file has two imports: `measurement_functions.py` and `gui_variables.py`:
 1. `convtomm` function is imported from `measurement_functions.py`. It converts the `ps` to the `mm`, assuming the beam passes delay line only once.
 2. `DelayLines` constant is imported from `gui_variables.py`. It contains the names of the delay lines one wants to use in this programm.
 It is possible to add multiple delay lines in the program. Sophisticated measurement functions can be written to operate with all of them simultaneously, see [measurement_functions.py](#measurement-functionspy).
+
 ### gui scan controls.py
-This file has the following **classes** and *functions*:
+This file has following **classes** and *functions*:
 1. `disable_event` function. It is used to prevent accidental collapse of GUI by hitting the red cross in top righ corner, while data acquisition is in the progress.
-2. `check_scan_direction` function will check if the input *Scan parameters* are correct.
+2. `check_scan_direction` function will check if the input [Scan parameters](#gui-scan-paramspy) are correct.
 3. **`QuickScanThread`** and **`MeasurementThread` classes** are the [thread](https://www.tutorialspoint.com/python/python_multithreading.htm) classes that prevent the programm from *hanging* or *lagging* during the measurement process.
     * **`MeasurementThread` class**, when initialized, will execute a `x_y_normal_scan` funtion from [->](#measurement-functionspy) `measurement_functions.py`.
         * Upon completion, `x_y_normal_scan` function will return the postion of delay stage for the measured signal's minimun and maximum values.
@@ -156,8 +163,8 @@ This file has the following **classes** and *functions*:
     * **`QuickScanThread` class**, when initialized, will execute a `fast_scan` funtion from [->](#measurement-functionspy) `measurement_functions.py`.
         * Upon completion, this class will put an item to the `Queue`, passed in its argument.
 4. **`ScanControls` class**, which is described below.
-
-This file defines the **`ScanControls` class** that creates `Scan Initialisation` section in the GUI. It is used to launch, pause or stop the scan. 
+---
+This file defines the **`ScanControls` class** which renders `Scan Initialisation` section in the GUI. It is used to launch, pause or stop the scan. 
 
 It initializes a `Frame` which contains one `LabelFrame` with:
 1. 4 buttons: Start, Stop, Pause and Quick Scan.
@@ -201,6 +208,7 @@ This is probably the most compicated part of the GUI. This file has imports from
 3. Checks for the validity of the input parameters.
 
 The most compicated parts are the **Start**, **Quick Scan** buttons, because of `Queue`'s and **`Threading`** classes that are called and initialized within. It might be hard to keep the track of it at first, but when understood, one can easilly create sophisticated measurement routines.
+
 ## GUI logic category
 text
 ### gui logic.py

@@ -56,6 +56,8 @@ It was made with an intent of user-friendly software configuration, hardware ini
 12. **Auto save and recall the parameters**:
     * The programm will save all the values (Scan folder, File name, Scan parameters, LIA sensitivity and time constant)
     * Upon the Initialization of the programm, all values will be restored and automatically filled in the respective entries.
+13. **Take a screenshot**:
+    * Save a printscreen, to compare the scan parameters in future.
 
 ## Requirements
 

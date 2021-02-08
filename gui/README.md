@@ -140,8 +140,11 @@ It initializes a `Frame`, which contains one `LabelFrame` with:
     * Will set the velocity of the *primary* delay line to the value typed in the in the adjustent Entry
 9. `change_delay_line` function:
     * Will set the selected delay line to be *primary*. 
-    
-It is possible to add multiple delay lines in the program. Sophisticated measurement functions can be written to operate with all of them simultaneously.
+
+This file has two imports: `measurement_functions.py` and `gui_variables.py`:
+1. `convtomm` function is imported from `measurement_functions.py`. It converts the `ps` to the `mm`, assuming the beam passes delay line only once.
+2. `DelayLines` constant is imported from `gui_variables.py`. It contains the names of the delay lines one wants to use in this programm.
+It is possible to add multiple delay lines in the program. Sophisticated measurement functions can be written to operate with all of them simultaneously, see [measurement_functions.py](#measurement-functionspy).
 ### gui scan controls.py
 text
 ## GUI logic category

@@ -1,6 +1,7 @@
 # pump-probe-experiment-control 
 
 ### Navigation:
+- [Features](#features)
   * [Requirements](#requirements)
 - [Program setup and first launch](#program-setup-and-first-launch)
   * [LIA setup](#lia-setup)
@@ -17,6 +18,41 @@ It was made with an intent of user-friendly software configuration, hardware ini
 
 ![Compiled GUI](https://i.ibb.co/bLRJ7M4/GUI.png "Compiled GUI")
 
+
+# Features
+
+1. Easy control over the scan parameters, as:
+  * Initial and final positions
+  * Time step
+  * Number of scans, for averaging
+  * Supports backward and forward scanning (Init pos < Final pos & Step > 0 or Init pos > Final pos & Step < 0)
+2. Auto-lookup for the maxima or the minima of the signal
+3. Adjustment of the LIA time constant and sensitivity
+4. Save the data to the specific folder with a specific filename. 
+5. Tracking of the amount of data accumulated during the day:
+  * Scan index will be appended at the end of the filename.
+  * If program will be closed, the scan index will be saved, no data will be overwritten!
+5. Real-time LIA display for the signal's amplitude optimization
+  * Make a scan, go to Max and optimize!
+6. Scan Pause and Stop functionality:
+  * Pause will pause acquisition after the current scan is finished
+  * Stop will wait for the end of the current scan and stop acquisition
+7. Quick Scan functionallity:
+  * Quick Scan will not save any data.
+  * Can work with Real-time LIA display.
+  * It will move the delay line within the defined time-frames (Scan Parameters), so one easilly optimize the amplitude of the signal
+8. Graphs, that are updated after each scan:
+  * Data recorded from X channel, plotted in function of Time delay and Delay Line position.
+  * Interactive toolbar for the X channel plot.
+  * Data recorded from Y channel, plotted in function of Time delay and Delay Line position.
+  * FFT of Data recorded from X channel, plotted in function Frequency (THz).
+9. Save the Graphs and data:
+  * Create the All scans file, that will be updated after each scan made (LIA readings in Volts vs Time delay)
+  * Save the X and Y channel plot(Average + last scan on the same plot), after acqusition is terminated or stopped.
+  * Save the Mean scans fille (average of X or Y channel data) (LIA readings in Volts vs Time delay).
+10. Auto save and recall the parameters:
+  * The programm will save all the values (Scan folder, File name, Scan parameters, LIA sensitivity and time constant)
+  * Upon the Initialization of the programm, all values will be restored and automatically filled in the respective entries.
 
 ## Requirements
 

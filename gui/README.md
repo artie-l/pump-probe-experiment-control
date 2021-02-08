@@ -150,10 +150,10 @@ This file has the following **classes** and *functions*:
 1. `disable_event` function. It is used to prevent accidental collapse of GUI by hitting the red cross in top righ corner, while data acquisition is in the progress.
 2. `check_scan_direction` function will check if the input *Scan parameters* are correct.
 3. **`QuickScanThread`** and **`MeasurementThread` classes** are the [thread](https://www.tutorialspoint.com/python/python_multithreading.htm) classes that prevent the programm from *hanging* or *lagging* during the measurement process.
-    * **`MeasurementThread` class**, when initialized, will execute a `x_y_normal_scan` funtion from `measurement_functions.py` ([link](#measurement-functionspy))
+    * **`MeasurementThread` class**, when initialized, will execute a `x_y_normal_scan` funtion from [->](#measurement-functionspy) `measurement_functions.py`.
         * Upon completion, `x_y_normal_scan` function will return the postion of delay stage for the measured signal's minimun and maximum values.
         * Upon completion, this class will put an item to the `Queue`, passed in its argument.
-    * **`QuickScanThread` class**, when initialized, will execute a `fast_scan` funtion from `measurement_functions.py` ([link](#measurement-functionspy))
+    * **`QuickScanThread` class**, when initialized, will execute a `fast_scan` funtion from [->](#measurement-functionspy) `measurement_functions.py`.
         * Upon completion, this class will put an item to the `Queue`, passed in its argument.
 4. **`ScanControls` class**, which is described below.
 
@@ -166,22 +166,22 @@ It initializes a `Frame` which contains one `LabelFrame` with:
     * `end_scan_var` to estimate the time it will take to complete the data acquisition
 3. 3 Labels
 4. `start_scan` function will `check_scan_direction`, and if it is correct:
-    * Disable the buttons that will interfere with the measurement with `controls_off` function (imported from `gui_logic.py` [->](#gui-logicpy)).
+    * Disable the buttons that will interfere with the measurement with `controls_off` function ([->](#gui-logicpy) `gui_logic.py`).
     * Create an empty `Queue`. 
-    * Initialize the **`MeasurementThread` class** that will run `x_y_normal_scan` function in the background (imported from 'measurement_functions.py' [->](measurement-functionspy)).
+    * Initialize the **`MeasurementThread` class** that will run `x_y_normal_scan` function in the background ([->](measurement-functionspy) 'measurement_functions.py').
     * Schedule to run `measurement_queue` function after 100 ms.
     * Disable the red cross in top righ corner of GUI.
 5. `measurement_queue` function:
     * Check if the `Queue` is empty. 
       * If yes, it will schedule to run itself after 100 ms.
       * If `Queue` is not empty anymore, it will:
-        + Save all inputs in the file by executing `save_settings` function (imported from `gui_logic.py` [->](#gui-logicpy))
-        + Enable the buttons that were disabled in 4. with `controls_off` function (imported from `gui_logic.py` [->](#gui-logicpy)).
+        + Save all inputs in the file by executing `save_settings` function ([->](#gui-logicpy) `gui_logic.py`)
+        + Enable the buttons that were disabled in 4. with `controls_off` function ([->](#gui-logicpy) `gui_logic.py`).
         + Enable the the red cross in top righ corner of GUI.
 6. `quick_scan` function will `check_scan_direction`, and if it is correct:
-    * Disable the buttons that will interfere with the measurement with `controls_on` function (imported from `gui_logic.py`[link](#gui-logicpy)).
+    * Disable the buttons that will interfere with the measurement with `controls_on` function ([link](#gui-logicpy) `gui_logic.py`).
     * Create an empty `Queue`. 
-    * Initialize the **`QuickScanThread` class** that will run `fast_scan` function in the background (imported from 'measurement_functions.py' [->](measurement-functionspy)).
+    * Initialize the **`QuickScanThread` class** that will run `fast_scan` function in the background ([->](measurement-functionspy) 'measurement_functions.py').
     * Schedule to run `quickscan_queue` function after 100 ms.
     * Disable the the red cross in top righ corner of GUI.
 7. `quickscan_queue` function:

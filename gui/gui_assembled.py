@@ -7,7 +7,7 @@ from matplotlib.figure import Figure
 
 from gui_scan_controls import ScanControls
 from gui_scan_params import ScanParameters
-from gui_filepath_entries import FilePathNameEntriess
+from gui_filepath_entries import FilePathNameEntries
 from gui_lia_controls import LIAControls
 from gui_delay_line_controls import DelayLineControls
 from gui_data_graphs import DataGraphs

@@ -3,11 +3,6 @@
 ### Navigation:
 - [Features](#features)
 - [Updates](#updates)
-- [Requirements](#requirements)
-- [Program setup and first launch](#program-setup-and-first-launch)
-  * [LIA setup](#lia-setup)
-  * [Delay line setup](#delay-line-setup)
-- [How to launch the software](#how-to-launch-the-software)
 - [What to be changed in the future](#what-to-be-changed-in-the-future)
 - [Supplementary information and Troubleshooting](#supplementary-information-and-troubleshooting)
 # 
@@ -19,7 +14,6 @@ This GUI is the "single-page" window with inputs for the time-resolved scan para
 It was made with an intent of user-friendly software configuration, hardware initialization and modifiability of the GUI itself. No prior programming knowledge required. 
 
 ![Compiled GUI](https://i.ibb.co/bLRJ7M4/GUI.png "Compiled GUI")
-
 
 # Features
 
@@ -68,7 +62,6 @@ It was made with an intent of user-friendly software configuration, hardware ini
 # Updates
 1. Old version that works with python 2.7. It can be found [here](https://github.com/artie-l/pump-probe-experiment-control/tree/master/py27)
 2. Added version that works with python 3.7. It can be found [here](https://github.com/artie-l/pump-probe-experiment-control/tree/master/py37)
-
 
 # What to be changed in the future
 Since I am at the last year of my PhD, there is almost no time prioritize the following things. Nevertheless, following features are still in plans, and might be released in the near future:

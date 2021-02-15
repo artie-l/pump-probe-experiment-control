@@ -68,16 +68,12 @@ It was made with an intent of user-friendly software configuration, hardware ini
 
 One can use the following `pip` commands to install the nesessary packages. 
 
-Python 2.7 version is required due to compatibility with original XPS Motion controller driver.
-
-* python 2.7
-  - https://www.python.org/ftp/python/2.7/python-2.7.amd64.msi
-  - https://repo.anaconda.com/archive/Anaconda2-2019.10-Windows-x86_64.exe
-    - For beginners I recommend Anaconda, as it comes with some necessary pre-installed packages, and has novice-friendly interface
+* python 3.7
+  - For beginners I recommend Anaconda, as it comes with some necessary pre-installed packages, and has novice-friendly interface
 * mttkinter
   - `pip install mttkinter`
-* NewPort XPS motion controller driver
-  - ftp://download.newport.com/MotionControl/Current/MotionControllers/XPS-Q/Drivers/python/XPS_Q8_drivers.py
+* Install the NewPort XPS motion controller driver
+  - https://github.com/pyepics/newportxps
 * numpy
   - `pip install numpy`
 * matplotlib
@@ -175,10 +171,8 @@ Normally, the program launch could be done in the two ways:
 # What to be changed in the future
 Since I am at the last year of my PhD, there is almost no time prioritize the following things. Nevertheless, following features are still in plans, and might be released in the near future:
 
-1. The Newport XPS python drivers, as it is the only thing that forces this program to be run with Python 2.7.
-   * The good candidate is here: https://github.com/pyepics/newportxps. It should require only the modification of `tools_initialization.py` file.
-2. First-launch setup window, to configure the LIA and DelayLines, in order not to mess with the .py files.
-3. The Windows/Linux installer.
+1. First-launch setup window, to configure the LIA and DelayLines, in order not to mess with the .py files.
+2. The Windows/Linux installer.
 
 # Supplementary information and Troubleshooting
 This section should be reffered to if one has some problems with the software, wants to add/modify some GUI elements. 

@@ -2,7 +2,7 @@
 
 ### Navigation:
 - [Features](#features)
-- [Updates](#updates)
+- [How to launch the programm](#how-to-launch-the-programm)
 - [What to be changed in the future](#what-to-be-changed-in-the-future)
 - [Supplementary information and Troubleshooting](#supplementary-information-and-troubleshooting)
 # 
@@ -59,9 +59,9 @@ It was made with an intent of user-friendly software configuration, hardware ini
 14. **Chopper frequency control** (disabled by the default):
     * Set a mechanical chopper, connected to LIA, to modulate the signal at a specific frequency (see [supplementary infromation](https://github.com/artie-l/pump-probe-experiment-control/blob/master/gui/README.md#gui-chopper-controlspy)).
 
-# Updates
-1. Old version that works with python 2.7. It can be found [here](https://github.com/artie-l/pump-probe-experiment-control/tree/master/py27)
-2. Added version that works with python 3.7. It can be found [here](https://github.com/artie-l/pump-probe-experiment-control/tree/master/py37)
+# How to launch the programm
+1. Old version that works **only** with python 2.7. Guide can be found [here](https://github.com/artie-l/pump-probe-experiment-control/tree/master/py27)
+2. Added version that works with python 3.7. Guide can be found [here](https://github.com/artie-l/pump-probe-experiment-control/tree/master/py37)
 
 # What to be changed in the future
 Since I am at the last year of my PhD, there is almost no time prioritize the following things. Nevertheless, following features are still in plans, and might be released in the near future:

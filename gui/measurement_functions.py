@@ -169,7 +169,7 @@ def x_y_normal_scan(GUI):
     
     # saving up the screenshot of the GUI
     GUI.parent.attributes("-topmost", True)
-    GUI.parent.after_idle(root.attributes,'-topmost',False)
+    GUI.parent.after_idle(GUI.parent.attributes,'-topmost',False)
     press('printscreen')
     ImageGrab.grabclipboard().save(folder + theday + '_' + filename + '_screenshot_' + str(daily_scan_number) + '.png','PNG')
 

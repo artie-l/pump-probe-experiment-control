@@ -123,8 +123,11 @@ def gui_init(GUI):
         GUI.lia_controls.sens_Combobox.set(LIASensVisual[int(Params[9])])
         GUI.lia.set_sens(Params[9])
         
-        GUI.delay_line_controls.delay_line_Combobox.set(Params[10])
-        GUI.positioner = Params[10]
+        if Params[10] not in DelayLines:
+            GUI.positioner = DelayLines[0]
+        else:
+            GUI.positioner = Params[10]
+        GUI.delay_line_controls.delay_line_Combobox.set(GUI.positioner)
         
         GUI.chopper_controls.frequency_Combobox.set(ChopperFrequencyPreset[1])
         GUI.lia.set_auxv2(LIAChopperOutpValues[1])

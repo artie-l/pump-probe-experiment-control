@@ -1,7 +1,7 @@
 from datetime import date
 from numpy import savetxt
 
-from gui_variables import LIATconstVisual, LIASensVisual, ChopperFrequencyPreset, LIAChopperOutpValues
+from gui_variables import *
 
 
 def enable(frame, state='!disabled'):

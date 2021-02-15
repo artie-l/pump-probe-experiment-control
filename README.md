@@ -2,6 +2,7 @@
 
 ### Navigation:
 - [Features](#features)
+- [Updates](#updates)
 - [Requirements](#requirements)
 - [Program setup and first launch](#program-setup-and-first-launch)
   * [LIA setup](#lia-setup)
@@ -63,6 +64,10 @@ It was made with an intent of user-friendly software configuration, hardware ini
     * Select or change the stage to be used for the next measurement.
 14. **Chopper frequency control** (disabled by the default):
     * Set a mechanical chopper, connected to LIA, to modulate the signal at a specific frequency (see [supplementary infromation](https://github.com/artie-l/pump-probe-experiment-control/blob/master/gui/README.md#gui-chopper-controlspy)).
+
+# Updates
+
+1. Added version that works with python 3.7. It can be found [here](https://github.com/artie-l/pump-probe-experiment-control/tree/master/py37)
 
 # Requirements
 

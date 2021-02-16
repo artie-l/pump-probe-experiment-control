@@ -260,3 +260,11 @@ This file has the following *functions*:
     * Plots the graphs on the GUI canvases
 ### gui variables.py
 This file has the following variables:
+1. `LIATconstVisual`: Values of the LIA time constant to be displaied in the GUI's combobox
+2. `tconstliaoutp`: Values of the time constant to send to the LIA
+3. `tconstuseroutp`: Values of the time constant to estimate the ending of the scan
+4. `LIASensVisual`: Values of the LIA sensitivity to be displaied in the GUI's combobox
+5. `sensliaoutp`: Values of the sensitivity to send to the LIA
+6. `ChopperFrequencyPreset`: Preset of the chopper frequencies
+7. `LIAChopperOutpValues`: Preset of the Voltages sent to the chopper
+8. `DelayLines`: Names of the delay lines needed for the measurement

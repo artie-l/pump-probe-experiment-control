@@ -231,9 +231,19 @@ This file is filled with following *functions*:
    * Calls `save_settings` and `controls_off` functions
    
 ## Hardware category
-text
+In this category we have the script that establishes the communication with measurement devices as LIA and DelayLine(s).
 ### tools initialization.py
-text
+This file has following **classes** and *functions*:
+1. **`DelayLine` class**:
+    * Connect to the DelayLine(s) with the previously defined names in [gui variables.py](#gui-variablespy).
+    * `move_to` function: Move delay line to desired position
+    * `set_velocity` function
+2. **`LIA` class**:
+    * Connect to the LIA
+    * Specific functions to call the predifined commands (see the LIA manual)
+    
+---
+This file has `if __name__ == "__main__":` section, that will only run if this file is directly run from an IDE. It helps the user to establish and check the connection to LIA and Delay Line(s). If one has LIA different from **SR830**, the functions inside the **`LIA` class**, more specifically the [strings](https://www.w3schools.com/python/python_strings.asp) inside the `lock_in.write` and `lock_in.query` functions should be changed to ones specified in the user manual.
 ## Uncategorized files
 text
 ### measurement functions.py

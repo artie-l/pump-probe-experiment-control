@@ -93,24 +93,24 @@ class LIA():
         time.sleep(0.02)
     
     def get_tconst(self):
-        return int(self.lock_in.query('OFLT?'))
         time.sleep(0.02)
+        return int(self.lock_in.query('OFLT?'))
         
     def get_sens(self):
-        return int(self.lock_in.query('SENS?'))
         time.sleep(0.02)
+        return int(self.lock_in.query('SENS?'))
             
     def get_buffer_len(self):
-        return int(self.lock_in.query('SPTS?'))
         time.sleep(0.02)
+        return int(self.lock_in.query('SPTS?'))
         
     def get_channel_one(self, bufferlength):
-        return self.lock_in.query('TRCA?1,0,'+ str(bufferlength))
         time.sleep(0.02)
+        return self.lock_in.query('TRCA?1,0,'+ str(bufferlength))
         
     def get_channel_two(self, bufferlength):
-        return self.lock_in.query('TRCA?2,0,'+ str(bufferlength))
         time.sleep(0.02)
+        return self.lock_in.query('TRCA?2,0,'+ str(bufferlength))
 
     def get_R(self):
         return float(self.lock_in.query('OUTP?3'))

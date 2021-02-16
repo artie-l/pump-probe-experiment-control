@@ -33,5 +33,3 @@ LIAChopperOutpValues = ('0', '0.227', '0.454', '0.682', '0.909', '1.137',
                         )
 
 DelayLines = ('Group1.Pos', 'Group4.Pos')
-
-rootfolder = 'C:/Users/XY/Programs/ManipControle/Root/'

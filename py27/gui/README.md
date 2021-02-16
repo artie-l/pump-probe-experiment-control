@@ -245,8 +245,18 @@ This file has following **classes** and *functions*:
 ---
 This file has `if __name__ == "__main__":` section, that will only run if this file is directly run from an IDE. It helps the user to establish and check the connection to LIA and Delay Line(s). If one has LIA different from **SR830**, the functions inside the **`LIA` class**, more specifically the [strings](https://www.w3schools.com/python/python_strings.asp) inside the `lock_in.write` and `lock_in.query` functions should be changed to ones specified in the user manual.
 ## Uncategorized files
-text
+In this category we have the files with data acquisition routines and global GUI variables, that are accessed to from different elements of GUI.
 ### measurement functions.py
-text
+This file has the following *functions*:
+1. `convtomm` function:
+    * Converts the time delay in ps to the delay line position in mm.
+2. `convtops` function:
+    * Converts the delay line position in mm to the time delay in ps. **Note:** If one has double-pass delay line, this function should be changed.
+3. `x_y_normal_scan`function:
+    * Data acquisition and file saving routine
+4. `fast_scan` function:
+    * Fast scan routine, used for the setup alignment
+5. `data_plot` function:
+    * Plots the graphs on the GUI canvases
 ### gui variables.py
-text
+This file has the following variables:

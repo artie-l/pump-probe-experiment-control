@@ -3,7 +3,7 @@ from numpy import savetxt
 
 from gui_variables import *
 
-
+# Enable the elements in the specific frame
 def enable(frame, state='!disabled'):
     def c_state(widget):
         # Is this widget a container?
@@ -22,10 +22,12 @@ def enable(frame, state='!disabled'):
                         w['state'] = state
 
     c_state(frame)
-
+    
+# Disable the elements in the specific frame
 def disable(frame):
     enable(frame, 'disabled')
 
+# Save settings   
 def save_settings(GUI):
     try:
         GUI.positioner
@@ -50,7 +52,8 @@ def save_settings(GUI):
     
     with open('misc/settings.txt','wb') as f:   #Write allfile
             savetxt(f,Parameters,fmt='%s',delimiter='\t');
-            
+
+# Check the date of the programm launch            
 def daily_check(theday):
     today = date.today().strftime('%d_%m_%Y')
     if theday != today:
@@ -71,7 +74,7 @@ def controls_on(GUI):
     enable(GUI.scan_controls)
     GUI.scan_controls.stop_scan_Button['state'] = 'disabled'
     GUI.scan_controls.pause_scan_Button['state'] = 'disabled'
-    enable(GUI.chopper_controls)
+    # enable(GUI.chopper_controls)
     if GUI.InitializeButton['text'] == 'Stop':
         GUI.InitializeButton['state'] = 'normal'
 
@@ -83,11 +86,11 @@ def controls_off(GUI):
     disable(GUI.delay_line_controls)
     disable(GUI.lia_controls)
     disable(GUI.scan_controls)
-    disable(GUI.chopper_controls)
+    # disable(GUI.chopper_controls)
     if GUI.InitializeButton['text'] == 'Stop':
         GUI.InitializeButton['state'] = 'disabled'
     
-    
+# Initialize the programm    
 def gui_init(GUI):
     
     # Setting up GUI elements
@@ -137,7 +140,7 @@ def gui_init(GUI):
     GUI.delay_line_controls.move_to_Max_Button['state'] = 'disabled'
     GUI.delay_line_controls.move_to_Min_Button['state'] = 'disabled'
         
-     
+# Stop the programm         
 def gui_stop(GUI):
     
     GUI.InitializeButton.configure(text="Initialize", bg="green",activebackground="green")

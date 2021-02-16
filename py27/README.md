@@ -6,6 +6,7 @@
   * [LIA setup](#lia-setup)
   * [Delay line setup](#delay-line-setup)
 - [How to launch the software](#how-to-launch-the-software)
+- [Supplementary information and Troubleshooting](#supplementary-information-and-troubleshooting)
 # 
 
 # Requirements

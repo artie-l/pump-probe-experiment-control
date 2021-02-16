@@ -210,9 +210,26 @@ This is probably the most compicated part of the GUI. This file has imports from
 The most compicated parts are the **Start**, **Quick Scan** buttons, because of `Queue`'s and **`Threading`** classes that are called and initialized within. It might be hard to keep the track of it at first, but when understood, one can easilly create sophisticated measurement routines.
 
 ## GUI logic category
-text
+Here, the python script that manages all the button logic, programm parameters save, check and recall.
 ### gui logic.py
-text
+This file is filled with following *functions*:
+1. `enable` function:
+   * Enable all elements in the frame, that was passed as argument
+2. `disable` function: 
+   * Disable all elements in the frame, that was passed as argument
+3. `save_settings` function:
+   * Save all programm inputs to the separate file
+4. `daily_check` function:
+   * Set the scan_number variable to zero if the programm was launched on the new day
+5. `controls_on` function:
+   * Enable specified GUI elements
+6. `controls_off` function: 
+   * Disable specified GUI elements
+7. `gui_init` function:
+   * Calls `controls_on` function and then recalls the previous program inputs previously saved to the file
+8. `gui_stop` function:
+   * Calls `save_settings` and `controls_off` functions
+   
 ## Hardware category
 text
 ### tools initialization.py

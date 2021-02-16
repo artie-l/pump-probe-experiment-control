@@ -210,16 +210,61 @@ This is probably the most compicated part of the GUI. This file has imports from
 The most compicated parts are the **Start**, **Quick Scan** buttons, because of `Queue`'s and **`Threading`** classes that are called and initialized within. It might be hard to keep the track of it at first, but when understood, one can easilly create sophisticated measurement routines.
 
 ## GUI logic category
-text
+Here, the python script that manages all the button logic, programm parameters save, check and recall.
 ### gui logic.py
-text
+This file is filled with following *functions*:
+1. `enable` function:
+   * Enable all elements in the frame, that was passed as argument
+2. `disable` function: 
+   * Disable all elements in the frame, that was passed as argument
+3. `save_settings` function:
+   * Save all programm inputs to the separate file
+4. `daily_check` function:
+   * Set the scan_number variable to zero if the programm was launched on the new day
+5. `controls_on` function:
+   * Enable specified GUI elements
+6. `controls_off` function: 
+   * Disable specified GUI elements
+7. `gui_init` function:
+   * Calls `controls_on` function and then recalls the previous program inputs previously saved to the file
+8. `gui_stop` function:
+   * Calls `save_settings` and `controls_off` functions
+   
 ## Hardware category
-text
+In this category we have the script that establishes the communication with measurement devices as LIA and DelayLine(s).
 ### tools initialization.py
-text
+This file has following **classes** and *functions*:
+1. **`DelayLine` class**:
+    * Connect to the DelayLine(s) with the previously defined names in [gui variables.py](#gui-variablespy).
+    * `move_to` function: Move delay line to desired position
+    * `set_velocity` function
+2. **`LIA` class**:
+    * Connect to the LIA
+    * Specific functions to call the predifined commands (see the LIA manual)
+    
+---
+This file has `if __name__ == "__main__":` section, that will only run if this file is directly run from an IDE. It helps the user to establish and check the connection to LIA and Delay Line(s). If one has LIA different from **SR830**, the functions inside the **`LIA` class**, more specifically the [strings](https://www.w3schools.com/python/python_strings.asp) inside the `lock_in.write` and `lock_in.query` functions should be changed to ones specified in the user manual.
 ## Uncategorized files
-text
+In this category we have the files with data acquisition routines and global GUI variables, that are accessed to from different elements of GUI.
 ### measurement functions.py
-text
+This file has the following *functions*:
+1. `convtomm` function:
+    * Converts the time delay in ps to the delay line position in mm.
+2. `convtops` function:
+    * Converts the delay line position in mm to the time delay in ps. **Note:** If one has double-pass delay line, this function should be changed.
+3. `x_y_normal_scan`function:
+    * Data acquisition and file saving routine
+4. `fast_scan` function:
+    * Fast scan routine, used for the setup alignment
+5. `data_plot` function:
+    * Plots the graphs on the GUI canvases
 ### gui variables.py
-text
+This file has the following variables:
+1. `LIATconstVisual`: Values of the LIA time constant to be displaied in the GUI's combobox
+2. `tconstliaoutp`: Values of the time constant to send to the LIA
+3. `tconstuseroutp`: Values of the time constant to estimate the ending of the scan
+4. `LIASensVisual`: Values of the LIA sensitivity to be displaied in the GUI's combobox
+5. `sensliaoutp`: Values of the sensitivity to send to the LIA
+6. `ChopperFrequencyPreset`: Preset of the chopper frequencies
+7. `LIAChopperOutpValues`: Preset of the Voltages sent to the chopper
+8. `DelayLines`: Names of the delay lines needed for the measurement

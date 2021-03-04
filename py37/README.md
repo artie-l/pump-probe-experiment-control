@@ -10,8 +10,14 @@
 # 
 
 # Requirements
+1. Anaconda (or miniconda)
+It is easy to setup the new `conda` environment with all necessary packages:
+   1. One should open an Anaconda Prompt
+   2. Download files from GitHub and extract them to desired directory `disk://folder/dir`
+   3. Set Anaconda prompt to file directory with this command `CD disk://folder/dir`
+   4. Execute `conda env create -f env_install.yml`
 
-One can use the following `pip` commands to install the nesessary packages. 
+If it does not work, one can use the following `pip` commands to manually install the nesessary packages:
 
 * python 3.7
   - For beginners I recommend Anaconda, as it comes with some necessary pre-installed packages, and has novice-friendly interface

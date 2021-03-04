@@ -4,6 +4,7 @@ dependencies:
   - pip
   - toml
   - git
+  - spyder
  
   - pip:
     - numpy
@@ -11,7 +12,6 @@ dependencies:
     - PyQtWebEngine==5.12.1
     - mttkinter
     - matplotlib
-    - spyder>=3.5
     - PyVISA
     - PyVISA-py
     - matplotlib

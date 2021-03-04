@@ -19,4 +19,4 @@ dependencies:
     - pillow
     - readme-renderer
     - pyautogui
-    - python -m pip install git+https://github.com/pyepics/newportxps/
+    - git+https://github.com/pyepics/newportxps/

@@ -1,0 +1,22 @@
+name: py37
+dependencies:
+  - python=3.7.9
+  - pip
+  - toml
+  - git
+ 
+  - pip:
+    - numpy
+    - PyQt5==5.12.2
+    - PyQtWebEngine==5.12.1
+    - mttkinter
+    - matplotlib
+    - spyder>=3.5
+    - PyVISA
+    - PyVISA-py
+    - matplotlib
+    - ipython
+    - pillow
+    - readme-renderer
+    - pyautogui
+    - python -m pip install git+https://github.com/pyepics/newportxps/

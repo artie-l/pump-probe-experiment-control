@@ -64,7 +64,7 @@ It was made with an intent of user-friendly software configuration, hardware ini
 2. Added version that works with python 3.7. Guide can be found [here](https://github.com/artie-l/pump-probe-experiment-control/tree/master/py37)
 
 # What to be changed in the future
-Since I am at the last year of my PhD, there is almost no time prioritize the following things. Nevertheless, following features are still in plans, and might be released in the near future:
+Since I am close to the PhD defense, there is almost no time for the further program developement and polishing. Nevertheless, following features are still in plans, and might be released in the near future:
 
 1. First-launch setup window, to configure the LIA and DelayLines, in order not to mess with the .py files.
 2. The Windows/Linux installer.

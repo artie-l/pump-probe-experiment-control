@@ -77,6 +77,7 @@ The following questions:
 3. What this button does? ;
 4. Where I can find this element of the GUI?;
 5. Etc.,
-or their derivatieves should be answered in the guide, or somewhat detailed explanation. The guide is avialiable here: https://github.com/artie-l/pump-probe-experiment-control/blob/master/py27/gui/README.md.
+
+These questions and their derivatives are adressed/explained in the following guide, which is avialiable here: https://github.com/artie-l/pump-probe-experiment-control/blob/master/py27/gui/README.md.
 
 If you have any questions or suggestions, do not hesitate to contact me. 
